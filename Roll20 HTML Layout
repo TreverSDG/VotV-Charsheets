@@ -1,0 +1,2931 @@
+<div class="pagebody">
+<div class="title"><img src="https://static.wixstatic.com/media/d5a0b8_c338f5c3c50d42cf8b44e5a5c3e2e391~mv2.png/v1/fill/w_936,h_101,al_c,q_85,usm_0.66_1.00_0.01/Reforged%20Logo%20Spine.webp" alt="VEIL OF THE VOID ROLEPLAYING SYSTEM" width="80%" height="80%"></div>
+
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked" /> <span class="sheet-tab">General</span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" /> <span class="sheet-tab">Gear</span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3" /> <span class="sheet-tab">Leveling</span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4" /> <span class="sheet-tab">Spells</span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="5" /> <span class="sheet-tab">Dossier</span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab6" value="6" /> <span class="sheet-tab">Company</span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab7" value="7" /> <span class="sheet-tab">...</span>
+<span></span>
+
+    <div class="global-container1 sheet-tab-content sheet-tab1">
+    
+        <div class="charsec1A">
+            
+            <input type="text" name="attr_Char_Name" placeholder="Character Name" />
+            <input type="text" name="attr_Character_Class" placeholder="Primary Class" />
+            <div class="level">
+            <label class="fieldheading">Level:</label> 
+            <input type="number" name="attr_Character_Level" value="0" min="0" max="20" />
+            </div>
+            <input type="text" name="attr_Character_Spec" placeholder="Specialization" />
+        </div>
+        
+        <div class="charsec1B statblocks">
+            
+            <button type="roll" value="/roll @{Power}d6cf<2cs>5 + @{Power1}d6cf<2cs>5" name="roll_PowerCheck" class='VirB blank-roll-button'>Power</button>
+            <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{Finesse1}d6cf<2cs>5" name="roll_FinesseCheck" class='VirB blank-roll-button'>Finesse</button>
+            <button type="roll" value="/roll @{Vitality}d6cf<2cs>5 + @{Vitality1}d6cf<2cs>5" name="roll_VitalityCheck" class='VirB blank-roll-button'>Vitality</button>
+            <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Mentality1}d6cf<2cs>5" name="roll_MentalityCheck" class='VirB blank-roll-button'>Mentality</button>
+            <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + @{Judgement1}d6cf<2cs>5" name="roll_JudgementCheck" class='VirB blank-roll-button'>Judgement</button>
+            <button type="roll" value="/roll @{Charm}d6cf<2cs>5 + @{Charm1}d6cf<2cs>5" name="roll_CharmCheck" class='VirB blank-roll-button'>Charm</button> 
+            
+            <div class="statfields">
+                <span></span>
+                <input type="number" name="attr_Power" class='Virtue' value="3" min="1" max="10"/>
+                <input type="number" name="attr_Finesse" class='Virtue' value="3" min="1" max="10"/>
+                <input type="number" name="attr_Vitality" class='Virtue' value="3" min="1" max="10"/>
+                <input type="number" name="attr_Mentality" class='Virtue' value="3" min="1" max="10"/>
+                <input type="number" name="attr_Judgement" class='Virtue' value="3" min="1" max="10"/>
+                <input type="number" name="attr_Charm" class='Virtue' value="3" min="1" max="10"/>
+                
+                <div class="pluses">
+                <span></span>
+                <span>  +  </span>
+                <span>  +  </span>
+                <span>  +  </span>
+                <span>  +  </span>
+                <span>  +  </span>
+                <span>  +  </span>
+                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <input type="number" name="attr_Power1" class='Virtue' value="0" min="-10" max="10"/> 
+        	    <input type="number" name="attr_Finesse1" class='Virtue' value="0" min="-10" max="10"/> 
+        	    <input type="number" name="attr_Vitality1" class='Virtue' value="0" min="-10" max="10"/> 
+        	    <input type="number" name="attr_Mentality1" class='Virtue' value="0" min="-10" max="10"/> 
+        	    <input type="number" name="attr_Judgement1" class='Virtue' value="0" min="-10" max="10"/> 
+                <input type="number" name="attr_Charm1" class='Virtue' value="0" min="-10" max="10"/> 
+            </div>
+            
+        </div>
+        
+        <div class="charsec1C">
+            
+            Movement: <input type="number" name="attr_Move" value="6" min="0" max="50"/> squares <br/> <br/>
+    		Initiative: <button type="roll" value="/roll 1d6 + @{Finesse} + @{init6}" name="roll_AP"> </button> 
+    		    + <input type="number" name="attr_init6" value="0" /> 
+    	    <br/><br/>
+            Determination: <input type="number" name="attr_DetermPs" value="0" min="0" max="20"/>
+        </div>
+        
+        <div class="charsec2A">
+            
+            <label>Class Points: </label>
+            <input type="number" name="attr_CClassP" value="0" min="0" max="20"/>
+            /
+            <input type="number" name="attr_maxClassP" value="0" min="0" max="20"/>
+            
+            <div>
+            <label class="fieldheading">Currency:</label>
+                <div class="credits span4">
+                    <input type="text" name="attr_Ccredits" class="100text" placeholder="1 Million"/>
+                    <select name="pricurrency" style="width: 100px">
+                        <option>Credits</option>
+                        <option>Gold</option>
+                        <option>Dollars</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="charsec2B">
+            
+            <label>HP:<br>Current/Max</label> <input type="number" name="attr_CVP" value="15" min="-8" max="10000"/>
+            				    <input type="number" name="attr_maxVP" value="15" min="0" max="10000"/>
+            
+            <button type="roll" value="/roll 1d6cf<2cs>5" name="roll_DS" class='blank-roll-button largetextbutton'>Death Save:</button>
+            
+            <div class="deathsaves">
+                    <div class="radios">
+                        
+                      <input type="hidden" class="radio" name="attr_level" value="1" />
+                      <button type="action" name="act_level_1" class="radio radio-1">
+                        <span class="checked"></span>
+                      </button>
+                      <button type="action" name="act_level_2" class="radio radio-2">
+                        <span class="checked"></span>
+                      </button>
+                      <button type="action" name="act_level_3" class="radio radio-3">
+                        <span class="checked"></span>
+                      </button>
+                      <button type="action" name="act_level_4" class="radio radio-4">
+                        <span class="checked"></span>
+                      </button>
+                      <button type="action" name="act_level_5" class="radio radio-5">
+                        <span class="checked"></span>
+                      </button>
+                      
+                    </div>
+                    
+                    <script type="text/worker">
+                      const levelRadioValues = ["1","2","3","4","5"];
+                      levelRadioValues.forEach(function(value) {
+                        on(`clicked:level_${value}`, function() {
+                          setAttrs({
+                            ["level"]: value
+                          });
+                        });
+                      });
+                    </script>
+                
+                <div class="radiolabels1">
+                
+                    <span></span>
+                    <label>0</label>
+                    <label>1</label>
+                    <label>2</label>
+                    <label>3</label>
+                    <label>4</label>
+                    
+                </div>  
+            </div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+    		<label>Shields:<br>Current/Max</label> <input type="number" name="attr_CShPs" value="0" min="0" max="20"/> <input type="number" name="attr_MaxShPs" value="0" min="0" max="20"/>
+            <span></span>
+            <span></span>    
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+    		<label>Armor Level:</label>
+                 <select name="attr_Armor" class='optslist'>
+                   <option value = "0">None</option>
+                   <option value = "2">Light</option>
+                   <option value = "3">Medium</option>
+                   <option value = "4">Heavy</option>
+                   <option value = "5">Reinforced</option>
+                   <option value = "6">Fortified</option>
+                 </select>
+         </div>
+        
+        <div class="charsec2C">
+            
+            <p class="determ">
+                For every 2 points invested into judgement, you gain 1 determination point.<br>
+                Upon reaching level 5, you gain additional points equal to your level.<br>
+                <br>
+                1 Point - Add +1 to any single die, including damage<br>
+                2 Points - Reroll your check<br>
+                5 Points - Force an adversary to reroll their check<br>
+                
+            </p>
+            
+        </div>
+        <!--
+        <div class="logo">
+            <span></span>
+            <img src="https://static.wixstatic.com/media/d5a0b8_aa5466bbfc9347e88f27b2ea47256bb9~mv2.png/v1/fill/w_600,h_457,al_c,q_85,usm_0.66_1.00_0.01/Reforged%20Logo%20White.webp" alt="Veil of the Void" width="65%" height="65%">
+        </div>
+        -->
+        <div class="charsec3A">
+            
+            <div class="SkiLvl">
+                <p>1 SP - Add +1 to a die result</p>
+                <p>2 SP - Roll +1 die on checks</p>
+                <p>3 SP - Reroll 1 failed check/round</p>
+                <p>4 SP - Add +1 to a die result (Total: 2 pips)</p>
+                <p>5 SP - Roll +1 die on checks (Total: +2 dice)</p>
+                <p>6 SP - Reduce Difficulties by 1 level</p>
+                
+            </div>
+            
+            <p class="SkillAdv">
+                You must complete 15 skill checks to earn level 1 in that skill from level 0. You must complete an additional 20 checks to reach level 2. Levels 3-7 require 25, 30, 35, 40,and 45 comlpeted checks respectively.<br>
+                Upon reaching level 7, you gain a special ability related to the skill.<br>
+                <br>
+            </p>
+        </div>
+        
+        <div class="charsec4A">
+            <label>Known Languages</label>
+            <div class="languages">
+                <input type="checkbox" name="attr_Lcelest" value="1" class='centre' />
+                <label class='language'>Celest</label>
+                <input type="checkbox" name="attr_Lfaraet" value="1" class='centre' />
+                <label class='language'>Fara'et</label>
+                <input type="checkbox" name="attr_Ldataleth" value="1" class='centre' />
+                <label class='language'>Dataleth</label>
+                
+                
+                <input type="checkbox" name="attr_Lchaotam" value="1" class='centre' />
+                <label class='language'>Chaotam</label>
+                <input type="checkbox" name="attr_Lforren" value="1" class='centre' />
+                <label class='language'>Forren</label>
+                <input type="checkbox" name="attr_Lcustom1" value="1" class='centre' />
+                <input type="text" class="empty-field"/>
+                
+                
+                <input type="checkbox" name="attr_Lcommon" value="1" class='centre' checked/>
+                <label class='language'>Common</label>
+                <input type="checkbox" name="attr_Lkohavi" value="1" class='centre' />
+                <label class='language'>Koh'avi</label>
+                <input type="checkbox" name="attr_Lcustom2" value="1" class='centre' />
+                <input type="text" class="empty-field"/>
+                
+                
+                <input type="checkbox" name="attr_Ldaema" value="1" class='centre' />
+                <label class='language'>Daema</label>
+                <input type="checkbox" name="attr_Lnatmed" value="1" class='centre' />
+                <label class='language'>Natura Media</label>
+                <input type="checkbox" name="attr_Lcustom3" value="1" class='centre' />
+                <input type="text" class="empty-field"/>
+                
+                
+                <input type="checkbox" name="attr_Lderali" value="1" class='centre' />
+                <label class='language'>Derali</label>
+                <input type="checkbox" name="attr_Lorda" value="1" class='centre' />
+                <label class='language'>Orda</label>
+                <input type="checkbox" name="attr_Lcustom4" value="1" class='centre' />
+                <input type="text" class="empty-field"/>
+                
+                
+                <input type="checkbox" name="attr_Ldivinial" value="1" class='centre' />
+                <label class='language'>Divinial</label>
+                <input type="checkbox" name="attr_Lrerah" value="1" class='centre' />
+                <label class='language'>Rerah</label>
+                <input type="checkbox" name="attr_Lcustom5" value="1" class='centre' />
+                <input type="text" class="empty-field"/>
+                
+                
+                <input type="checkbox" name="attr_Ldracon" value="1" class='centre' />
+                <label class='language'>Dracon</label>
+                <input type="checkbox" name="attr_Lsildia" value="1" class='centre' />
+                <label class='language'>Sildia</label>
+                <input type="checkbox" name="attr_Lcustom6" value="1" class='centre' />
+                <input type="text" class="empty-field"/>
+                
+                
+                <input type="checkbox" name="attr_Lellanen" value="1" class='centre' />
+                <label class='language'>Ellanen</label>
+                <input type="checkbox" name="attr_Lsylnat" value="1" class='centre' />
+                <label class='language'>Sylnatura</label>
+                <input type="checkbox" name="attr_Lcustom7" value="1" class='centre' />
+                <input type="text" class="empty-field"/>
+                
+            </div>
+        </div>
+        
+        <div class="charsec5A">
+            <div class="priweapons">
+            <h3>Weapons</h3>
+                <fieldset class="repeating_weapons">
+                    <div class="repeatweapons">
+                        <label>Weapon Name:</label>
+                        <span></span>
+                        <label>Range:</label>
+                        <span></span>
+                        <label>Ammo: (Current/Max)</label>
+                        <span></span>
+                        <span></span>
+                        
+                        <input type="text" name="attr_weaponname" class="customweapon"/>
+                        <span></span>
+                        <input type="text" name="attr_weaponrange" class="customweapon"/>
+                        <span></span>
+                        <input type="number" name="attr_cweaponammo" class="customweapon"/>
+                        <label>/</label>
+                        <input type="number" name="attr_maxweaponammo" class="customweapon"/>
+                            
+                        <div class="mainweapondamage span7">    
+                            <label>Damage:</label>
+                            <select name="attr_wdtype" style="width: 60px">
+                                <option value="1 + @{WB}">1</option>
+                                <option value="d3 + @{WB}">D3</option>
+                                <option value="d6 + @{WB}">D6</option>
+                                <option value="d6 + d3 + @{WB}">D9</option>
+                                <option value="2d6 + @{WB}">2d6</option>
+                                <option value="3d6 + @{WB}">3d6</option>
+                                <option value="4d6 + @{WB}">4d6</option>
+                                <option value="5d6 + @{WB}">5d6</option>
+                                <option value="6d6 + @{WB}">6d6</option>
+                                <option value="7d6 + @{WB}">7d6</option>
+                                <option value="8d6 + @{WB}">8d6</option>
+                            </select>
+                            <label>+</label>
+                            <input type="number" name="attr_WB" class="customweapon" value="0" min="0" max="99"/>
+                            <label>+</label>
+                            <select name="attr_wvt" style="width: 70px">
+                                <option value="0">None</option>
+                                <option value="@{Power}">Power</option>
+                                <option value="@{Finesse}">Finesse</option>
+                                <option value="@{Vitality}">Vitality</option>
+                                <option value="@{Mentality}">Mentality</option>
+                                <option value="@{Judgement}">Judgement</option>
+                                <option value="@{Charm}">Charm</option>
+                            </select>
+                            <button type="roll" value="/roll @{wdtype} + @{wvt}" name="roll_weapons" class="blank-roll-button span2">Roll Damage</button>
+                            
+                            </div>
+                        </div>
+                </fieldset>
+                
+            </div>
+        </div>
+        
+        <div class="charskills repeatscroll">
+            <!--
+            Add to roll forumla to get successes and failures colored:
+            cf<2cs>5
+            -->             
+            
+            <span></span>
+            <div class="skilllist ">
+                <label>Skill Name</label>
+                <span></span>
+                <span>Skill Points (SP):</span>
+                <span>Success Rolls:</span>
+                <span>Total Bonus Dice:</span>
+                
+                    <Label>Analysis: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Anaover}d6cf<2cs>5" name="roll_AnalMentalityCheck" class='VirB blank-roll-button'>M</button>
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + @{Anaover}d6cf<2cs>5" name="roll_AnalJudgementCheck" class='VirB blank-roll-button'>J</button>
+                </div>
+                    <input type="number" name="attr_Analysis" value="0" min="0" max="7"/> 
+                    <input type="number" name="attr_Anasuc" value="0" min="0" max="50"/> 
+                    <input type="number" name="attr_Anaover" value="0" min="0" max="13" />
+               
+                    <Label>Arcanting: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Speover}d6cf<2cs>5" name="roll_SpellMentalityCheck" class='VirB blank-roll-button'>M</button>
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + @{Speover}d6cf<2cs>5" name="roll_SpellJudgementCheck" class='VirB blank-roll-button'>J</button>
+                    |
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + 1 + @{Speover}d6cf<2cs>5" name="roll_SpellPowerCheck" class='VirB blank-roll-button'>P</button>
+                </div>
+                    <input type="number" name="attr_Spell" value="0" min="0" max="7"/> 
+                    <input type="number" name="attr_Spesuc" value="0" min="0" max="50"/> 
+                    <input type="number" name="attr_Speover" value="0" min="0" max="13" />
+                
+                    <Label>Balance: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{Balover}d6cf<2cs>5" name="roll_BalFinesseCheck" class='VirB blank-roll-button'>F</button>
+                </div>
+                    <input type="number" name="attr_Balance" value="0" min="0" max="7"/> 
+                    <input type="number" name="attr_Balsuc" value="0" min="0" max="50"/> 
+                    <input type="number" name="attr_Balover" value="0" min="0" max="13" />
+                
+
+                    <Label>Covert: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{Covover}d6cf<2cs>5" name="roll_CovFinesseCheck" class='VirB blank-roll-button'>F</button>
+                </div>
+                    <input type="number" name="attr_Covert" value="0" min="0" max="7"/> 
+                    <input type="number" name="attr_Covsuc" value="0" min="0" max="50"/> 
+                    <input type="number" name="attr_Covover" value="0" min="0" max="13" />
+                
+
+                    <Label>Crafting: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Craover}d6cf<2cs>5" name="roll_CraftMentalityCheck" class='VirB blank-roll-button'>M</button>
+                    |
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + 1 + @{Craover}d6cf<2cs>5" name="roll_CraftJudgementCheck" class='VirB blank-roll-button'>J</button>
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + 1 + @{Craover}d6cf<2cs>5" name="roll_CraftPowerCheck" class='VirB blank-roll-button'>P</button>
+                    <button type="roll" value="/roll @{Vitality}d6cf<2cs>5 + 1 + @{Craover}d6cf<2cs>5" name="roll_CraftVitalityCheck" class='VirB blank-roll-button'>V</button>
+                </div>
+                    <input type="number" name="attr_Crafting" value="0" min="0" max="7"/> 
+                    <input type="number" name="attr_Crasuc" value="0" min="0" max="50"/> 
+                    <input type="number" name="attr_Craover" value="0" min="0" max="13" />
+                
+
+                    <Label>Defense: </Label>
+                <div>
+                    <button type="roll" value="/roll @{Vitality}d6cf<2cs>5 + @{Defover}d6cf<2cs>5" name="roll_DefVitalityCheck" class='VirB blank-roll-button'>V</button>
+                </div>
+                    <input type="number" name="attr_Defense" value="0" min="0" max="7"/> 
+                    <input type="number" name="attr_Defsuc" value="0" min="0" max="50"/> 
+                    <input type="number" name="attr_Defover" value="0" min="0" max="13" />
+               
+
+                    <Label>Dodge: </Label>
+                <div>
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{Dodover}d6cf<2cs>5" name="roll_DodFinesseCheck" class='VirB blank-roll-button'>F</button>
+                </div>
+                    <input type="number" name="attr_Dodge" value="0" min="0" max="7"/> 
+                    <input type="number" name="attr_Dodsuc" value="0" min="0" max="50"/> 
+                    <input type="number" name="attr_Dodover" value="0" min="0" max="13" />
+               
+
+                    <Label>Dual Wielding: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + @{DWover}d6cf<2cs>5" name="roll_DWPowerCheck" class='VirB blank-roll-button'>P</button>
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{DWover}d6cf<2cs>5" name="roll_DWFinesseCheck" class='VirB blank-roll-button'>F</button>
+                </div>
+                    <input type="number" name="attr_DW" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_DWsuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_DWover" value="2" min="0" max="13" />
+                
+
+                    <Label>Environmental Survival: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Vitality}d6cf<2cs>5 + @{ESover}d6cf<2cs>5" name="roll_ESVitalityCheck" class='smallbutton VirB blank-roll-button'>V</button>
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{ESover}d6cf<2cs>5" name="roll_ESMentalityCheck" class='smallbutton VirB blank-roll-button'>M</button>
+                    |
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + 1 + @{ESover}d6cf<2cs>5" name="roll_ESPowerCheck" class='smallbutton VirB blank-roll-button'>P</button>
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + 1 + @{ESover}d6cf<2cs>5" name="roll_ESJudgementCheck" class='smallbutton VirB blank-roll-button'>J</button>
+                </div>
+                    <input type="number" name="attr_ES" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_ESsuc" value="0" min="0" max="50" />  
+                    <input type="number" name="attr_ESover" value="0" min="0" max="13" />
+               
+
+                    <Label>Flight:</Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{Fliover}d6cf<2cs>5" name="roll_FliFinesseCheck" class='VirB blank-roll-button'>F</button>
+                </div>
+                    <input type="number" name="attr_Flight" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Flisuc" value="0" min="0" max="50" />  
+                    <input type="number" name="attr_Fliover" value="0" min="0" max="13" />
+               
+
+                   <Label>Intimidation: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + @{Intover}d6cf<2cs>5" name="roll_IntPowerCheck" class='VirB blank-roll-button'>P</button>
+                    <button type="roll" value="/roll @{Charm}d6cf<2cs>5 + @{Intover}d6cf<2cs>5" name="roll_IntCharmCheck" class='VirB blank-roll-button'>C</button>
+                </div>
+                    <input type="number" name="attr_Intim" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Intsuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Intover" value="0" min="0" max="13" />
+              
+
+                    <Label>Insight: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + @{Intuover}d6cf<2cs>5" name="roll_IntuMentalityCheck" class='VirB blank-roll-button'>J</button>
+                </div>
+                    <input type="number" name="attr_Intuition" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Intusuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Intuover" value="0" min="0" max="13" />
+              
+
+                    <Label>Mechanics: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Mecover}d6cf<2cs>5" name="roll_MecMentalityCheck" class='VirB blank-roll-button'>M</button>
+                </div>
+                    <input type="number" name="attr_Mech" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Mecsuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Mecover" value="0" min="0" max="13" />
+               
+
+                    <Label>Medicament: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Medover}d6cf<2cs>5" name="roll_MedMentalityCheck" class='VirB blank-roll-button'>M</button>
+                    |
+                    <button type="roll" value="/roll @{Vitality}d6cf<2cs>5 + 1 + @{Medover}d6cf<2cs>5" name="roll_MedVitalityCheck" class='VirB blank-roll-button'>V</button>
+                </div>
+                    <input type="number" name="attr_Medica" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Medsuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Medover" value="0" min="0" max="13" />
+              
+
+                    <Label>Muscle: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + @{Musover}d6cf<2cs>5" name="roll_MusPowerCheck" class='VirB blank-roll-button'>P</button>
+                    <button type="roll" value="/roll @{Vitality}d6cf<2cs>5 + @{Musover}d6cf<2cs>5" name="roll_MusVitalityCheck" class='VirB blank-roll-button'>V</button>
+                </div>
+                    <input type="number" name="attr_Muscle" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Mussuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Musover" value="0" min="0" max="13" />
+              
+
+                    <Label>Observation: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + @{Obsover}d6cf<2cs>5" name="roll_ObsJudgementCheck" class='smallbutton VirB blank-roll-button'>J</button>
+                </div>
+                    <input type="number" name="attr_Observ" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Obssuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Obsover" value="0" min="0" max="13" />
+              
+
+                    <Label>Performance: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Perover}d6cf<2cs>5" name="roll_PerMentalityCheck" class='VirB blank-roll-button'>M</button>
+                    <button type="roll" value="/roll @{Charm}d6cf<2cs>5 + @{Perover}d6cf<2cs>5" name="roll_PerCharmCheck" class='VirB blank-roll-button'>C</button>
+                </div>
+                    <input type="number" name="attr_Perform" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Persuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Perover" value="0" min="0" max="13" />
+             
+
+                    <Label>Piloting: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{Pilover}d6cf<2cs>5" name="roll_PilFinesseCheck" class='smallbutton VirB blank-roll-button'>F</button>
+                    |
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + 1 + @{Pilover}d6cf<2cs>5" name="roll_PilMentalityCheck" class='smallbutton VirB blank-roll-button'>M</button>
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + 1 + @{Pilover}d6cf<2cs>5" name="roll_PilJudgementCheck" class='smallbutton VirB blank-roll-button'>J</button>
+                </div>
+                    <input type="number" name="attr_Pilot" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Pilsuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Pilover" value="0" min="0" max="13" />
+              
+
+                   <Label>Programming: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Proover}d6cf<2cs>5" name="roll_ProMentalityCheck" class='VirB blank-roll-button'>M</button>
+                </div>
+                    <input type="number" name="attr_Program" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Prosuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Proover" value="0" min="0" max="13" />
+              
+
+                    <Label>Sleight of Hand: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{SoHover}d6cf<2cs>5" name="roll_SoHFinesseCheck" class='smallbutton VirB blank-roll-button'>F</button>
+                    |
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + 1 + @{SoHover}d6cf<2cs>5" name="roll_SoHMentalityCheck" class='smallbutton VirB blank-roll-button'>M</button>
+                </div>
+                    <input type="number" name="attr_SoH" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_SoHsuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_SoHover" value="0" min="0" max="13"/>
+               
+
+                    <Label>Speechcraft: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Charm}d6cf<2cs>5 + @{Speuover}d6cf<2cs>5" name="roll_SpeCharmCheck" class='VirB blank-roll-button'>C</button>
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{Speuover}d6cf<2cs>5" name="roll_SpeMentalityCheck" class='VirB blank-roll-button'>M</button>
+                </div>
+                    <input type="number" name="attr_Speechc" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Spesuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Speuover" value="0" min="0" max="13" />
+                    
+                    
+                    <Label>Tracking / Hunting: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{THover}d6cf<2cs>5" name="roll_THMentalityCheck" class='VirB blank-roll-button'>M</button>
+                </div>
+                    <input type="number" name="attr_TH" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_THsuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_THover" value="0" min="0" max="13" />
+                
+                    
+                    <Label>Weapons Master: </Label>
+                <div class="skillbuttons">
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + @{Weaover}d6cf<2cs>5" name="roll_WeaPowerCheck" class='VirB blank-roll-button'>P</button>
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{Weaover}d6cf<2cs>5" name="roll_WeaFinesseCheck" class='VirB blank-roll-button'>F</button>
+                </div>
+                    <input type="number" name="attr_Weapon_Master" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_Weasuc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_Weaover" value="2" min="0" max="13" />
+                <div class="span5">
+                    <label >Custom Skills:</label>
+                    <fieldset class="repeating_customskills">
+                <div class="cskilllist">
+                    <input type="text" class="empty-field" placeholder="Custom" />
+                <div class="cskillbuttons">
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + @{custskill1over}d6cf<2cs>5" name="roll_custskill1PowerCheck" class=' cskill VirB blank-roll-button'>P</button>
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + @{custskill1over}d6cf<2cs>5" name="roll_custskill1FinesseCheck" class=' cskill VirB blank-roll-button'>F</button>
+                    <button type="roll" value="/roll @{Vitality}d6cf<2cs>5 + @{custskill1over}d6cf<2cs>5" name="roll_custskill1VitalityCheck" class=' cskill VirB blank-roll-button'>V</button>
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + @{custskill1over}d6cf<2cs>5" name="roll_custskill1JudgementCheck" class=' cskill VirB blank-roll-button'>J</button>
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + @{custskill1over}d6cf<2cs>5" name="roll_custskill1MentalityCheck" class=' cskill VirB blank-roll-button'>M</button>
+                    <button type="roll" value="/roll @{Charm}d6cf<2cs>5 + @{custskill1over}d6cf<2cs>5" name="roll_custskill1CharmCheck" class=' cskill VirB blank-roll-button'>C</button>
+                </div>
+                    <input type="number" name="attr_custskill1" value="0" min="0" max="7" /> 
+                    <input type="number" name="attr_custskill1suc" value="0" min="0" max="50" /> 
+                    <input type="number" name="attr_custskill1over" value="0" min="0" max="13" />
+                    <span></span>
+                <div class="cskillbuttons">
+                    <button type="roll" value="/roll @{Power}d6cf<2cs>5 + 1 + @{custskill1over}d6cf<2cs>5" name="roll_custskill2PowerCheck" class=' cskill VirB blank-roll-button'>|P</button>
+                    <button type="roll" value="/roll @{Finesse}d6cf<2cs>5 + 1 + @{custskill1over}d6cf<2cs>5" name="roll_custskill2FinesseCheck" class=' cskill VirB blank-roll-button'>|F</button>
+                    <button type="roll" value="/roll @{Vitality}d6cf<2cs>5 + 1 + @{custskill1over}d6cf<2cs>5" name="roll_custskill2VitalityCheck" class=' cskill VirB blank-roll-button'>|V</button>
+                    <button type="roll" value="/roll @{Judgement}d6cf<2cs>5 + 1 + @{custskill1over}d6cf<2cs>5" name="roll_custskill2JudgementCheck" class=' cskill VirB blank-roll-button'>|J</button>
+                    <button type="roll" value="/roll @{Mentality}d6cf<2cs>5 + 1 + @{custskill1over}d6cf<2cs>5" name="roll_custskill2MentalityCheck" class=' cskill VirB blank-roll-button'>|M</button>
+                    <button type="roll" value="/roll @{Charm}d6cf<2cs>5 + 1 + @{custskill1over}d6cf<2cs>5" name="roll_custskill2CharmCheck" class=' cskill VirB blank-roll-button'>|C</button>
+                </div>
+                </div>    
+                </fieldset>
+                </div>    
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <div class="global-container2 sheet-tab-content sheet-tab2">
+        <div class="gearsec1A">
+            <h3>Inventory</h3>
+            
+            
+            
+                    <select name="attr_gear">
+                    <option value="0">Currency</option>
+                    <option value="1">Armor</option>
+                    <option value="2">Weapon</option>
+                    <option value="3">Tool</option>
+                    <option value="4">Ammo</option>
+                    <option value="5">Container</option>
+                    <option value="6">Artifact</option>
+                    <option value="7">Cybernetics</option>
+                    <option value="8">Trinket</option>
+                    </select>
+
+                      <input class="gear gear0" type="checkbox" name="attr_gear" value="0"><!-- Currency-->                    
+                      <input class="gear gear1" type="checkbox" name="attr_gear" value="1"><!-- Armor-->
+                      <input class="gear gear2" type="checkbox" name="attr_gear" value="2"><!-- Weapon -->
+                      <input class="gear gear3" type="checkbox" name="attr_gear" value="3"><!-- Tool -->
+                      <input class="gear gear4" type="checkbox" name="attr_gear" value="4"><!-- Ammo -->
+                      <input class="gear gear5" type="checkbox" name="attr_gear" value="5"><!-- Container -->
+                      <input class="gear gear6" type="checkbox" name="attr_gear" value="6"><!-- Artifact -->
+                      <input class="gear gear7" type="checkbox" name="attr_gear" value="7"><!-- Cybernetics -->
+                      <input class="gear gear8" type="checkbox" name="attr_gear" value="8"><!-- Trinket -->
+                    
+                    
+                    <div class="geartraits_currency repeatscroll">
+                    <div class="gearcredits">
+                        <input type="text" name="attr_Ccredits" class="200text"/>
+                        <select name="pricurrency" style="width: 100px">
+                            <option>Credits</option>
+                            <option>Gold</option>
+                            <option>Dollars</option>
+                        </select>
+                    </div>
+                          <fieldset class="repeating_currency">
+                            <div class="repeatgcurrency">  
+                            <input type="number" name="attr_gcurrency" class="bignumber" value="0" min="0"/>
+                            <input type="text" name="currencyname" class="200text" placeholder="Credits">
+                            </div>
+                          </fieldset>
+                    </div>
+                    
+                      <div class="geartraits_armor repeatscroll">
+                          <fieldset class="repeating_armor">
+                            <div class="repeatgarmor">
+                            <label>Armor Class:</label>
+                            <select name="attr_garmorclass" style="width: 90px" class="span2">
+                                <option value = "0">None</option>
+                                <option value = "1">Light</option>
+                                <option value = "2">Medium</option>
+                                <option value = "3">Heavy</option>
+                                <option value = "4">Reinforced</option>
+                                <option value = "5">Fortified</option>
+                            </select>
+                            <label>Name:</label>
+                            <input type="text" name="attr_garmorname" class="100text span2"/>
+                            <label>Difficulty:</label>
+                            <select name="attr_garmordiff" style="width: 200px" class="span2">
+                                <option value = "0">None - 1 Success</option>
+                                <option value = "1">Easy - 2 Successes</option>
+                                <option value = "2">Average - 3 Successes</option>
+                                <option value = "3">Hard - 4 Successes</option>
+                                <option value = "4">Tough - 5 Successes</option>
+                                <option value = "5">Challenging - 6 Successes</option>
+                            </select>
+                            <label>Details:</label>
+                            <textarea name="attr_gweapondetails" class="shortdetailbox span2"> </textarea>
+                            </div>
+                            <hr>
+                          </fieldset>
+                      </div>
+                    
+                    <div class="geartraits_weapon repeatscroll">
+                          <fieldset class="repeating_gweapons">
+                            <div class="repeatgweapons">
+                                
+                                <input type="text" name="attr_gweaponname" class="200text span5" placeholder="Weapon Name" />
+                                <select name="attr_gweapontype"  style="width: 70px" class="span3">
+                                    <option value="1">Melee</option>
+                                    <option value="2">Ranged</option>
+                                    <option value="3">Trap</option>
+                                </select>
+                                
+                                <input class="gearweapontype gwetype1" type="checkbox" name="attr_gweapontype" value="1" /> <!-- Melee -->
+                                <input class="gearweapontype gwetype2" type="checkbox" name="attr_gweapontype" value="2" /> <!-- Ranged -->
+                                <input class="gearweapontype gwetype3" type="checkbox" name="attr_gweapontype" value="3" /> <!-- Trap -->
+                                
+                                <input type="text" name="attr_gdamagetype" class="100text" placeholder="Damage Type" />
+                                
+                                <input type="text" name="attr_gammotype" class="customweapon 100text span2" placeholder="Ammo Type"/>
+                                <input type="text" name="attr_grange" class="customweapon 100text span3" placeholder="Range" />
+                                <div class="gweaponclass-melee span4">
+                                <label class="tentext">Damaged:</label>
+                                <input type="checkbox" name="attr_gwMdamage" value="1" class='centre' />
+                                </div>
+                                <div class="gweaponclass-ranged span4">
+                                <label class="tentext">Clip Size:</label>
+                                <input type="number" name="attr_gclipsize" class="customweapon 50text"/>
+                                <label class="tentext">Damaged:</label>
+                                <input type="checkbox" name="attr_gwrdamage" value="1" class='centre' />
+                                </div>
+                                <div class="gweaponclass-trap span4">
+                                <label class="tentext">Triggered:</label>
+                                <input type="checkbox" name="attr_gwttrigger" value="1" class='centre' />
+                                <label class="tentext">Damaged:</label>
+                                <input type="checkbox" name="attr_gwtdamage" value="1" class='centre' />
+                                </div>
+                                <div class="weapondamage span5">
+                                    <label class="span5">Weapon Damage:</label>    
+                                    <input type="text" name="attr_gweapondamage" class="50text" placeholder="1D6" />
+                                    <label>+</label>
+                                    <input type="number" class="customweapon" value="0" min="0" max="99"/>
+                                    <label>+</label>
+                                    <select style="width: 100px" name="attr_gweaponvirtue" >
+                                        <option>...</option>
+                                        <option>Power</option>
+                                        <option>Finesse</option>
+                                        <option>Vitality</option>
+                                        <option>Mentality</option>
+                                        <option>Judgement</option>
+                                        <option>Charm</option>
+                                    </select>
+                                    <div class="weapdamaoeoption span5">
+                                    AOE <input type="checkbox" name="attr_gwaoe" value="1" class='gaoepow centre' />
+                                    Cone <input type="checkbox" name="attr_gwcone" value="1" class='centre' />
+                                    Line <input type="checkbox" name="attr_gwline" value="1" class='centre' />
+                                    <div class="flexweaoe">
+                                    <label class="tentext">AOE Range:</label>
+                                    <input type="text" name="attr_gaoerange" class="customweapon 100text span3" placeholder="3x3 squares" />
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <span></span>
+                                    <div class="weap-details">
+                                    <label>Details:</label>
+                                    <textarea name="attr_gweapondetails" class="gwdetailbox"> </textarea>
+                                    
+                                </div>
+                            </div>
+                            <hr>
+                        </fieldset>
+                    </div>
+                    
+                      <div class="geartraits_tool repeatscroll">
+                          <fieldset class="repeating_tool">
+                            <div class="repeatgtool">  
+                            <label class="span2">Tool Name:</label>
+                            <input type="text" name="attr_gtoolname" class="200text span7"/>
+                            <select name="attr_gtoolsize" style="width: 100px" class="span3">
+                                <option>Miniscule</option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                            <label class="smalltext">Combat</label>
+                            <input type="checkbox" name="attr_gtcombat" value="1" class='centre' />
+                            <label class="smalltext">Healing</label>
+                            <input type="checkbox" name="attr_gtheal" value="1" class='centre' />
+                            <label class="smalltext">Crafting</label>
+                            <input type="checkbox" name="attr_gtcraft" value="1" class='centre' />
+                            <label>Details:</label>
+                            <textarea name="attr_gtooldetails" class="shortdetailbox span8"> </textarea>
+                            </div>
+                            <hr>
+                          </fieldset>
+                      </div>
+                    
+                      <div class="geartraits_ammo repeatscroll">
+                          <fieldset class="repeating_ammo">
+                            <div class="repeatgammo">
+                            <label class="span2">Ammo Type:</label>
+                            <input type="text" name="attr_gammoname" class="100text span3"/>
+                            <label>Clip Size:</label>
+                            <input type="number" name="attr_gammoclipsize" class="customweapon span2" value="0" min="0" max="99"/>
+                            <label>Clip Quantity:</label>
+                            <input type="number" name="attr_gammoclipcount" class="customweapon" value="0" min="0" max="99"/>
+                            </div>
+                          </fieldset>
+                      </div>
+                    
+                      <div class="geartraits_container repeatscroll">
+                          <fieldset class="repeating_container">
+                            <div class="repeatgcontainer">  
+                            <input type="number" name="attr_gcontainerquant" class="customweapon" value="0" min="0" max="99"/>
+                            <input type="text" name="attr_gcontainername" class="100text span4" value="Crate/Barrel"/>
+                            <label class="span3">Dimensions:</label>
+                            <input type="text" name="attr_gcontainercap" class="100text span2" value="1m/1m/1m"/>
+                            <label class="span2">Contents:</label>
+                            <textarea name="attr_gcontainerdetails" class="shortdetailbox span3"> </textarea>  
+                            </div>
+                            <hr>
+                          </fieldset>
+
+                      </div>
+                    
+                      <div class="geartraits_artifact repeatscroll">
+                            <fieldset class="repeating_artifact">
+                            <div class="repeatgartifact">    
+                             <select name="attr_gartifactrarity" style="width: 100px" class="span9">
+                                <option>Mundane</option>
+                                <option>Common</option>
+                                <option>Uncommon</option>
+                                <option>Rare</option>
+                                <option>Very Rare</option>
+                                <option>Legendary</option>
+                                <option>Impossible</option>
+                                <option>Curious</option>
+                            </select>
+                            
+                            <label class="span3">Artifact Name:</label>
+                            <label class="smalltext">Combat</label>
+                            <input type="checkbox" name="attr_gtcombat" value="1" class='centre' />
+                            <label class="smalltext">Healing</label>
+                            <input type="checkbox" name="attr_gtheal" value="1" class='centre' />
+                            <label class="smalltext">Crafting</label>
+                            <input type="checkbox" name="attr_gtcraft" value="1" class='centre' />
+                            <input type="text" name="attr_gartname" class="200text span9"/>
+                            
+                            <label>Details:</label>
+                            <textarea name="attr_gartdetails" class="shortdetailbox span8"> </textarea> 
+                            </div>
+                            <hr>
+                            </fieldset>
+                      </div>
+                    
+                      <div class="geartraits_cybernetics repeatscroll">
+                          <fieldset class="repeating_cyber">
+                            <div class="repeatgcyber">  
+                            <label class="span2">Cybernetics Model:</label>
+                            <label class="smalltext">Damaged</label>
+                            <input type="checkbox" name="attr_gcyberdam" value="1" class='centre' />
+                            <input type="text" name="attr_cybername" class="span4" />
+                            <label>Details:</label>
+                            <textarea name="attr_gcyberdetails" class="shortdetailbox span3"> </textarea>
+                          </div>
+                          <hr>
+                          </fieldset>
+                        
+                      </div>
+                    
+                      <div class="geartraits_trinket repeatscroll">
+                          <fieldset class="repeating_trink">
+                            <div class="repeatgtrink">
+                            <label>Name:</label>
+                            <input type="text" name="attr_trinketname" class="span2" />
+                            <label class="span2">Description:</label>
+                            <textarea name="attr_gtrinkdetails" class="shortdetailbox span2"> </textarea>
+                            </div>
+                            <hr>
+                          </fieldset>
+                    
+                </div>
+       
+       
+       
+        </div>
+        
+        <div class="gearsec2A">
+             <h3>Proficiencies</h3>
+             <div class="repeatscroll">
+                <fieldset class="repeating_charprofs">
+                    <div class="proficiencies">
+                    <select name="attr_charprofs" style="width: 120px" class="span7">
+                        <option>Weapons</option>
+                        <option>Armor</option>
+                        <option>Tool</option>
+                        <option>Class Item</option>
+                        <option>Artifact</option>
+                        <option>Language</option>
+                        <option>Arcana</option>
+                    </select>
+                    
+                    <label>Item Name</label>
+                    <input type="text" name="attr_prof_name" class="span6"/>
+                    <label class="span4">Proficiency Bonus:</label> 
+                    <label class="span3">Non-Proficient Penalty:</label>
+                    <textarea name="attr_charprofposdetails" class="profbox span4"> </textarea> 
+                    <textarea name="attr_charprofnegdetails" class="profbox span3"> </textarea>                
+                    </div>
+                    <hr>
+                </fieldset>
+            </div>
+        </div>
+        
+        <div class="gearsec3A">
+       
+        <div>
+        <button type="action" name="act_vehicles" >Vehicles</button>
+        <button type="action" name="act_ships" >Ships</button>
+        <button type="action" name="act_mechs" >Mechs</button>
+        </div>
+        
+        <input type='hidden' class='sheet-tabstoggle2' name='attr_sheetTab2'  value='character'  />
+            
+            
+            
+            <div class='vehicles repeatscroll'>
+                <fieldset class="repeating_vewe">
+                    <div class="vehiclemain">
+                        <div class="vehicleid">
+                        <label class="span3">Name or ID:</label>
+                        <input type="text" name="attr_Vehic_Name" class="span7"/>
+                        <label class="centertext">Model:</label>
+                        <input type="text" name="attr_Vehic_Class" class="span4 empty-field"/>
+                        <label class="span3 centertext">Origin:</label>
+                        <input type="text" name="attr_Vehic_Origin" class="span2 empty-field"/>
+                            <label class="span2">Fuel Capacity: </label>
+                               <input type="number" name="attr_fuelcur1" class="span4 customvehicletext" value="0" min="0"/>
+                                <label class="centertext">/</label>
+                                <input type="number" name="attr_fuelmax1" class="span3 customvehicletext" value="0" min="0"/>
+                            <!--
+                            <input type='hidden' type='number' value='@{fuelicv1}' name="attr_vefuelbar" class="sheet-hidden sheet-fuelbar" disabled='true'>
+                            <div class="span10 sheet-fuelbar"></div>
+                            //-->
+                        
+                        </div>
+                        
+                        <div class="vehiclevirtues">
+                                <button type="roll" value="/roll @{vepower1}d6cf<2cs>5 + @{vepowerp1}d6cf<2cs>5" name="roll_VePowerCheck1" class='center blank-roll-button'>Power</button>
+                                <button type="roll" value="/roll @{vefinesse1}d6cf<2cs>5 + @{vefinessep1}d6cf<2cs>5" name="roll_VeFinesseCheck1" class='center blank-roll-button'>Finesse</button>
+                                <button type="roll" value="/roll @{vevitality1}d6cf<2cs>5 + @{vevitalityp1}d6cf<2cs>5" name="roll_VeVitalityCheck1" class='center blank-roll-button'>Vitality</button>
+                                <input type="number" name="attr_vepower1" class='center' value="3" min="1" max="15"/>
+                                <input type="number" name="attr_vefinesse1" class='center' value="3" min="1" max="15"/>
+                                <input type="number" name="attr_vevitality1" class='center' value="3" min="1" max="15"/>
+                                <label class=" centertext tentext">+Bonus Dice</label>
+                                <label class=" centertext tentext">+Bonus Dice</label>
+                                <label class=" centertext tentext">+Bonus Dice</label>
+                                <input type="number" name="attr_vepowerp1" class='Virtue center' value="0" min="0" max="15"/>
+                                <input type="number" name="attr_vefinessep1" class='Virtue center' value="0" min="0" max="15"/>
+                                <input type="number" name="attr_vevitalityp1" class='Virtue center' value="0" min="0" max="15"/>
+                        </div>
+                        <div class="vehiclesym">
+                            <div class="modegrid">
+                            <label class='smalltext'>Stellar</label>
+                            <input type="checkbox" name="attr_vestarbox" value="1" class='centre' />
+                            <label class='smalltext'>Aerial</label>
+                            <input type="checkbox" name="attr_veairbox" value="1" class='centre' />
+                            <label class='smalltext'>Aquatic</label>
+                            <input type="checkbox" name="attr_veaqubox" value="1" class='centre' />
+                            <label class='smalltext'>Terrain</label>
+                            <input type="checkbox" name="attr_vegrnbox" value="1" class='centre' />
+                            <label class='smalltext'>Hover</label>
+                            <input type="checkbox" name="attr_vehovbox" value="1" class='centre' />
+                            </div>
+                            
+                        </div>
+                        <div class="vehicscroll">
+                            
+                            <div class="vehicleweapons">
+                                <label class="smalltext endtext">Quantity:</label>
+                                <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_veweaponquantity1" class="customweapon"/>
+                                <input type="text" name="attr_veweaponname1" class="customweapon span5"/>
+                                <label>Range:</label>
+                                <input type="text" name="attr_veweaponrange1" class="customweapon"/>
+                                
+                                <label>Ammo: </label>
+                                <input type="number" name="attr_vecweaponammo1" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_vemaxweaponammo1" class="customweapon"/>
+    
+                                <div class="vewedam span6">    
+                                    <label>Damage:</label>
+                                    <select name="attr_vewdtype1" style="width: 60px">
+                                        <option value="1 + @{veWB1}">1</option>
+                                        <option value="d3 + @{veWB1}">D3</option>
+                                        <option value="d6 + @{veWB1}">D6</option>
+                                        <option value="d6 + d3 + @{veWB1}">D9</option>
+                                        <option value="2d6 + @{veWB1}">2d6</option>
+                                        <option value="3d6 + @{veWB1}">3d6</option>
+                                        <option value="4d6 + @{veWB1}">4d6</option>
+                                        <option value="5d6 + @{veWB1}">5d6</option>
+                                        <option value="6d6 + @{veWB1}">6d6</option>
+                                        <option value="7d6 + @{veWB1}">7d6</option>
+                                        <option value="8d6 + @{veWB1}">8d6</option>
+                                    </select>
+                                    <span></span>
+                                    +
+                                    <span></span>
+                                    <input type="number" name="attr_veWB1" class="customweapon" value="0" min="0" max="99"/>
+                                    +
+                                    <select name="attr_vewvt1" style="width: 70px">
+                                        <option value="0">None</option>
+                                        <option value="@{vePower1}">Power</option>
+                                        <option value="@{veFinesse1}">Finesse</option>
+                                        <option value="@{veVitality1}">Vitality</option>
+                                    </select>
+                                    <button type="roll" value="/roll @{vewdtype1} + @{vewvt1}" name="roll_veweapons1" class="blank-roll-button">Roll Damage</button>
+                                </div>
+                                    <div class="weap-descript">
+                                    <label class="span6">Description:</label>
+                                    <textarea name="attr_weapondescription1" class="veweaponbox"> </textarea>
+                                    </div>
+                            </div>
+                                    <hr>
+                            <div class="vehicleweapons">
+                                <label class="smalltext endtext">Quantity:</label>
+                                <label class="span5">Weapon Name:</label>
+                                    <input type="number" name="attr_veweaponquantity2" class="customweapon"/>
+                                    <input type="text" name="attr_veweaponname2" class="customweapon span5"/>
+                                <label>Range:</label>
+                                    <input type="text" name="attr_veweaponrange2" class="customweapon"/>
+                                    
+                                <label>Ammo: </label>
+                                    <input type="number" name="attr_vecweaponammo2" class="customweapon"/>
+                                    <label>/</label>
+                                    <input type="number" name="attr_vemaxweaponammo2" class="customweapon"/>
+        
+                                <div class="vewedam span6">    
+                                    <label>Damage:</label>
+                                    <select name="attr_vewdtype2" style="width: 60px">
+                                        <option value="1 + @{veWB2}">1</option>
+                                        <option value="d3 + @{veWB2}">D3</option>
+                                        <option value="d6 + @{veWB2}">D6</option>
+                                        <option value="d6 + d3 + @{veWB2}">D9</option>
+                                        <option value="2d6 + @{veWB2}">2d6</option>
+                                        <option value="3d6 + @{veWB2}">3d6</option>
+                                        <option value="4d6 + @{veWB2}">4d6</option>
+                                        <option value="5d6 + @{veWB2}">5d6</option>
+                                        <option value="6d6 + @{veWB2}">6d6</option>
+                                        <option value="7d6 + @{veWB2}">7d6</option>
+                                        <option value="8d6 + @{veWB2}">8d6</option>
+                                    </select>
+                                    <span></span>
+                                    +
+                                    <span></span>
+                                    <input type="number" name="attr_veWB2" class="customweapon" value="0" min="0" max="99"/>
+                                    +
+                                    <select name="attr_vewvt2" style="width: 70px">
+                                        <option value="0">None</option>
+                                        <option value="@{vePower1}">Power</option>
+                                        <option value="@{veFinesse1}">Finesse</option>
+                                        <option value="@{veVitality1}">Vitality</option>
+                                    </select>
+                                    <button type="roll" value="/roll @{vewdtype2} + @{vewvt2}" name="roll_veweapons2" class="blank-roll-button">Roll Damage</button>
+                                </div>
+                                    <div class="weap-descript">
+                                    <label class="span6">Description:</label>
+                                    <textarea name="attr_weapondescription2" class="veweaponbox"> </textarea>
+                                    </div>
+                            </div>
+    								<hr>
+                            <div class="vehicleweapons">
+                                <label class="smalltext endtext">Quantity:</label>
+                                <label class="span5">Weapon Name:</label>
+                                    <input type="number" name="attr_veweaponquantity3" class="customweapon"/>
+                                    <input type="text" name="attr_veweaponname3" class="customweapon span5"/>
+                                <label>Range:</label>
+                                    <input type="text" name="attr_veweaponrange3" class="customweapon"/>
+                                    
+                                <label>Ammo: </label>
+                                    <input type="number" name="attr_vecweaponammo3" class="customweapon"/>
+                                    <label>/</label>
+                                    <input type="number" name="attr_vemaxweaponammo3" class="customweapon"/>
+                                <div class="vewedam span6">    
+                                    <label>Damage:</label>
+                                    <select name="attr_vewdtype3" style="width: 60px">
+                                        <option value="1 + @{veWB3}">1</option>
+                                        <option value="d3 + @{veWB3}">D3</option>
+                                        <option value="d6 + @{veWB3}">D6</option>
+                                        <option value="d6 + d3 + @{veWB3}">D9</option>
+                                        <option value="2d6 + @{veWB3}">2d6</option>
+                                        <option value="3d6 + @{veWB3}">3d6</option>
+                                        <option value="4d6 + @{veWB3}">4d6</option>
+                                        <option value="5d6 + @{veWB3}">5d6</option>
+                                        <option value="6d6 + @{veWB3}">6d6</option>
+                                        <option value="7d6 + @{veWB3}">7d6</option>
+                                        <option value="8d6 + @{veWB3}">8d6</option>
+                                    </select>
+                                    <span></span>
+                                    +
+                                    <span></span>
+                                    <input type="number" name="attr_veWB3" class="customweapon" value="0" min="0" max="99"/>
+                                    +
+                                    <select name="attr_vewvt3" style="width: 70px">
+                                        <option value="0">None</option>
+                                        <option value="@{vePower1}">Power</option>
+                                        <option value="@{veFinesse1}">Finesse</option>
+                                        <option value="@{veVitality1}">Vitality</option>
+                                    </select>
+                                    <button type="roll" value="/roll @{vewdtype3} + @{vewvt3}" name="roll_veweapons3" class="blank-roll-button">Roll Damage</button>
+                                </div>
+                                    <div class="weap-descript">
+                                    <label class="span6">Description:</label>
+                                    <textarea name="attr_weapondescription3" class="veweaponbox"> </textarea>
+                                    </div>
+                            </div>
+    								<hr>
+                            <div class="vehicleweapons">
+                                <label class="smalltext endtext">Quantity:</label>
+                                <label class="span5">Weapon Name:</label>
+                                    <input type="number" name="attr_veweaponquantity4" class="customweapon"/>
+                                    <input type="text" name="attr_veweaponname4" class="customweapon span5"/>
+                                <label>Range:</label>
+                                    <input type="text" name="attr_veweaponrange4" class="customweapon"/>
+                                    
+                                <label>Ammo: </label>
+                                    <input type="number" name="attr_vecweaponammo4" class="customweapon"/>
+                                    <label>/</label>
+                                    <input type="number" name="attr_vemaxweaponammo4" class="customweapon"/>
+        
+                                <div class="vewedam span6">    
+                                    <label>Damage:</label>
+                                    <select name="attr_vewdtype4" style="width: 60px">
+                                        <option value="1 + @{veWB4}">1</option>
+                                        <option value="d3 + @{veWB4}">D3</option>
+                                        <option value="d6 + @{veWB4}">D6</option>
+                                        <option value="d6 + d3 + @{veWB4}">D9</option>
+                                        <option value="2d6 + @{veWB4}">2d6</option>
+                                        <option value="3d6 + @{veWB4}">3d6</option>
+                                        <option value="4d6 + @{veWB4}">4d6</option>
+                                        <option value="5d6 + @{veWB4}">5d6</option>
+                                        <option value="6d6 + @{veWB4}">6d6</option>
+                                        <option value="7d6 + @{veWB4}">7d6</option>
+                                        <option value="8d6 + @{veWB4}">8d6</option>
+                                    </select>
+                                    <span></span>
+                                    +
+                                    <span></span>
+                                    <input type="number" name="attr_veWB4" class="customweapon" value="0" min="0" max="99"/>
+                                    +
+                                    <select name="attr_vewvt4" style="width: 70px">
+                                        <option value="0">None</option>
+                                        <option value="@{vePower1}">Power</option>
+                                        <option value="@{veFinesse1}">Finesse</option>
+                                        <option value="@{veVitality1}">Vitality</option>
+                                    </select>
+                                    <button type="roll" value="/roll @{vewdtype4} + @{vewvt4}" name="roll_veweapons4" class="blank-roll-button">Roll Damage</button>
+                                </div>
+                                    <div class="weap-descript">
+                                    <label class="span6">Description:</label>
+                                    <textarea name="attr_weapondescription4" class="veweaponbox"> </textarea>
+                                    </div>
+                            </div>
+    								<hr>
+                            <div class="vehicleweapons">
+                                <label class="smalltext endtext">Quantity:</label>
+                                <label class="span5">Weapon Name:</label>
+                                    <input type="number" name="attr_veweaponquantity5" class="customweapon"/>
+                                    <input type="text" name="attr_veweaponname5" class="customweapon span5"/>
+                                <label>Range:</label>
+                                    <input type="text" name="attr_veweaponrange5" class="customweapon"/>
+                                    
+                                <label>Ammo: </label>
+                                    <input type="number" name="attr_vecweaponammo5" class="customweapon"/>
+                                    <label>/</label>
+                                    <input type="number" name="attr_vemaxweaponammo5" class="customweapon"/>
+        
+                                <div class="vewedam span6">    
+                                    <label>Damage:</label>
+                                    <select name="attr_vewdtype5" style="width: 60px">
+                                        <option value="1 + @{veWB5}">1</option>
+                                        <option value="d3 + @{veWB5}">D3</option>
+                                        <option value="d6 + @{veWB5}">D6</option>
+                                        <option value="d6 + d3 + @{veWB5}">D9</option>
+                                        <option value="2d6 + @{veWB5}">2d6</option>
+                                        <option value="3d6 + @{veWB5}">3d6</option>
+                                        <option value="4d6 + @{veWB5}">4d6</option>
+                                        <option value="5d6 + @{veWB5}">5d6</option>
+                                        <option value="6d6 + @{veWB5}">6d6</option>
+                                        <option value="7d6 + @{veWB5}">7d6</option>
+                                        <option value="8d6 + @{veWB5}">8d6</option>
+                                    </select>
+                                    <span></span>
+                                    +
+                                    <span></span>
+                                    <input type="number" name="attr_veWB5" class="customweapon" value="0" min="0" max="99"/>
+                                    +
+                                    <select name="attr_vewvt5" style="width: 70px">
+                                        <option value="0">None</option>
+                                        <option value="@{vePower1}">Power</option>
+                                        <option value="@{veFinesse1}">Finesse</option>
+                                        <option value="@{veVitality1}">Vitality</option>
+                                    </select>
+                                    <button type="roll" value="/roll @{vewdtype5} + @{vewvt5}" name="roll_veweapons5" class="blank-roll-button">Roll Damage</button>
+                                </div>
+                                    <div class="weap-descript">
+                                    <label class="span6">Description:</label>
+                                    <textarea name="attr_weapondescription5" class="veweaponbox"> </textarea>
+                                    </div>
+                            </div>
+    								<hr>
+    
+    
+                        </div>
+                        <div class="vehiclestats1">
+                            
+                                <label>HP: </label>
+                                <input type="number" name="attr_vechp1" class="span2 customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_vemaxhp1" class="customweapon"/>
+                            <span class="span8"></span>
+                                <label class="span2">Shields: </label>
+                                <input type="number" name="attr_vecshp1" class="span3 customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_vemaxshp1" class="span3 customweapon"/>
+                            <span class="span4"></span>
+                                <label class="span2">Speed: </label> 
+                                <input type="number" name="attr_veMove" class="span3" value="6" min="0" max="50"/> 
+                                <p class="span2">squares</p>
+                            <span class="span6"></span>
+                                <button type="roll" value="/roll 1d6 + @{veFinesse1} + @{veinit6}" name="roll_AP" class="span3 blank-roll-button">Initiative: </button> 
+                                + 
+                                <input type="number" name="attr_veinit6" class="span3" value="0" /> 
+                            
+                        </div>
+                        <div class="vehicleaugments1">
+                            <label>Special Features:</label>
+                            <textarea name="attr_vespecials" class="velongbox"> </textarea>
+                        </div>
+
+
+                </div>
+                        <hr>
+                        <!--
+                        <script type="text/worker">
+                                on('sheet:opened change:fuelcur1 change:fuelmax1', function() {
+                                    getAttrs(['fuelcur1', 'fuelmax1'], function(values) {
+                                        // make sure the maximum and current values are numbers; using +value || 0 is one way to do this.
+                                        const maximum = +values.fuelmax1 || 0;
+                                        const current = +values.fuelcur1 || 0;
+                                        // get the percentage value
+                                        const percent = (current / maximum) || 0;
+                                        // it looks like you want to round up to increments of 10%, so 33% would be reported as 4.
+                                        // the following does that, and if over 100% reports 999.
+                                        const tvalue = percent > 1 ? 999 : Math.ceil(percent * 10);
+                                        console.log('fuelic value is ' + tvalue);
+                                
+                                        setAttrs({
+                                            'fuelicv1':tvalue
+                                        });
+                                    });
+                                });
+                        </script>
+                        //-->
+                    </fieldset>
+                </div>
+            
+            
+            <div class="ships repeatscroll">
+                    <fieldset class="repeating_shwe repeatscroll">
+                    <div class="shipmain">
+                    <div class="vehicleid">
+                    <label class="span3">Name or ID:</label>
+                    <input type="text" name="attr_Ship_Name" class="span7"/>
+                    <label class="centertext">Class:</label>
+                    <input type="text" name="attr_Ship_Class" class="span4 empty-field"/>
+                    <label class="span3 centertext">Origin:</label>
+                    <input type="text" name="attr_ship_Origin" class="span2 empty-field"/>
+                        <label class="span2">Fuel Capacity: </label>
+                           <input type="number" name="attr_shfuelcur1" class="span4 customvehicletext" value="0" min="0"/>
+                            <label class="centertext">/</label>
+                            <input type="number" name="attr_shfuelmax1" class="span3 customvehicletext" value="0" min="0"/>
+                           <!-- 
+                        <input type='hidden' type='number' value='@{fuelicv1}' name="attr_shfuelbar" class="sheet-hidden sheet-fuelbar" disabled='true'>
+                            <div class="span10 sheet-fuelbar"></div>
+                        //-->
+                            
+                        
+                    <label class="span3">Jump Capability: </label>
+                            <input type="number" name="attr_shipjumpcap1" value="0" min="0"/>
+                            <label class="centertext">/</label>
+                            <input type="number" name="attr_shipmaxjumpcap1" value="0" min="0"/>
+                    
+                    </div>
+                    
+                    <div class="vehiclevirtues">
+                            <button type="roll" value="/roll @{shpower1}d6cf<2cs>5 + @{shpowerp1}d6cf<2cs>5" name="roll_shPowerCheck1" class='center blank-roll-button'>Power</button>
+                            <button type="roll" value="/roll @{shfinesse1}d6cf<2cs>5 + @{shfinessep1}d6cf<2cs>5" name="roll_shFinesseCheck1" class='center blank-roll-button'>Finesse</button>
+                            <button type="roll" value="/roll @{shvitality1}d6cf<2cs>5 + @{shvitalityp1}d6cf<2cs>5" name="roll_shVitalityCheck1" class='center blank-roll-button'>Vitality</button>
+                            <input type="number" name="attr_shpower1" class='center' value="3" min="1" max="15"/>
+                            <input type="number" name="attr_shfinesse1" class='center' value="3" min="1" max="15"/>
+                            <input type="number" name="attr_shvitality1" class='center' value="3" min="1" max="15"/>
+                            <label class=" centertext tentext">+Bonus Dice</label>
+                            <label class=" centertext tentext">+Bonus Dice</label>
+                            <label class=" centertext tentext">+Bonus Dice</label>
+                            <input type="number" name="attr_shpowerp1" class='Virtue center' value="0" min="0" max="15"/>
+                            <input type="number" name="attr_shfinessep1" class='Virtue center' value="0" min="0" max="15"/>
+                            <input type="number" name="attr_shvitalityp1" class='Virtue center' value="0" min="0" max="15"/>
+                    </div>
+                    <div class="vehiclesym">
+                        <div class="modegrid">
+                            <label class='smalltext'>Stellar</label>
+                            <input type="checkbox" name="attr_vestarbox" value="1" class='centre' />
+                            <label class='smalltext'>Aerial</label>
+                            <input type="checkbox" name="attr_veairbox" value="1" class='centre' />
+                            <label class='smalltext'>Aquatic</label>
+                            <input type="checkbox" name="attr_veaqubox" value="1" class='centre' />
+                            </div>
+                    </div>
+                    <div class="vehicscroll">
+                        
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                            <input type="number" name="attr_shweaponquantity1" class="customweapon"/>
+                            <input type="text" name="attr_shweaponname1" class="customweapon span5"/>
+                            <label>Range:</label>
+                            <input type="text" name="attr_shweaponrange1" class="customweapon"/>
+                            
+                            <label>Ammo: </label>
+                            <input type="number" name="attr_shcweaponammo1" class="customweapon"/>
+                            <label>/</label>
+                            <input type="number" name="attr_shmaxweaponammo1" class="customweapon"/>
+
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_shwdtype1" style="width: 60px">
+                                    <option value="1 + @{shWB1}">1</option>
+                                    <option value="d3 + @{shWB1}">D3</option>
+                                    <option value="d6 + @{shWB1}">D6</option>
+                                    <option value="d6 + d3 + @{shWB1}">D9</option>
+                                    <option value="2d6 + @{shWB1}">2d6</option>
+                                    <option value="3d6 + @{shWB1}">3d6</option>
+                                    <option value="4d6 + @{shWB1}">4d6</option>
+                                    <option value="5d6 + @{shWB1}">5d6</option>
+                                    <option value="6d6 + @{shWB1}">6d6</option>
+                                    <option value="7d6 + @{shWB1}">7d6</option>
+                                    <option value="8d6 + @{shWB1}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_shWB1" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_shwvt1" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{shPower1}">Power</option>
+                                    <option value="@{shFinesse1}">Finesse</option>
+                                    <option value="@{shVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{vewdtype1} + @{vewvt1}" name="roll_shweapons1" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_shweapondescription1" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+                                <hr>
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_shweaponquantity2" class="customweapon"/>
+                                <input type="text" name="attr_shweaponname2" class="customweapon span5"/>
+                            <label>Range:</label>
+                                <input type="text" name="attr_shweaponrange2" class="customweapon"/>
+                                
+                            <label>Ammo: </label>
+                                <input type="number" name="attr_shcweaponammo2" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_shmaxweaponammo2" class="customweapon"/>
+    
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_shwdtype2" style="width: 60px">
+                                    <option value="1 + @{shWB2}">1</option>
+                                    <option value="d3 + @{shWB2}">D3</option>
+                                    <option value="d6 + @{shWB2}">D6</option>
+                                    <option value="d6 + d3 + @{shWB2}">D9</option>
+                                    <option value="2d6 + @{shWB2}">2d6</option>
+                                    <option value="3d6 + @{shWB2}">3d6</option>
+                                    <option value="4d6 + @{shWB2}">4d6</option>
+                                    <option value="5d6 + @{shWB2}">5d6</option>
+                                    <option value="6d6 + @{shWB2}">6d6</option>
+                                    <option value="7d6 + @{shWB2}">7d6</option>
+                                    <option value="8d6 + @{shWB2}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_shWB2" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_shwvt2" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{shPower1}">Power</option>
+                                    <option value="@{shFinesse1}">Finesse</option>
+                                    <option value="@{shVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{shwdtype2} + @{shwvt2}" name="roll_shweapons2" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_shweapondescription2" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+								<hr>
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_shweaponquantity3" class="customweapon"/>
+                                <input type="text" name="attr_shweaponname3" class="customweapon span5"/>
+                            <label>Range:</label>
+                                <input type="text" name="attr_shweaponrange3" class="customweapon"/>
+                                
+                            <label>Ammo: </label>
+                                <input type="number" name="attr_shcweaponammo3" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_shmaxweaponammo3" class="customweapon"/>
+    
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_shwdtype3" style="width: 60px">
+                                    <option value="1 + @{shWB3}">1</option>
+                                    <option value="d3 + @{shWB3}">D3</option>
+                                    <option value="d6 + @{shWB3}">D6</option>
+                                    <option value="d6 + d3 + @{shWB3}">D9</option>
+                                    <option value="2d6 + @{shWB3}">2d6</option>
+                                    <option value="3d6 + @{shWB3}">3d6</option>
+                                    <option value="4d6 + @{shWB3}">4d6</option>
+                                    <option value="5d6 + @{shWB3}">5d6</option>
+                                    <option value="6d6 + @{shWB3}">6d6</option>
+                                    <option value="7d6 + @{shWB3}">7d6</option>
+                                    <option value="8d6 + @{shWB3}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_shWB3" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_shwvt3" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{shPower1}">Power</option>
+                                    <option value="@{shFinesse1}">Finesse</option>
+                                    <option value="@{shVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{shwdtype3} + @{shwvt3}" name="roll_shweapons3" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_shweapondescription3" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+								<hr>
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_shweaponquantity4" class="customweapon"/>
+                                <input type="text" name="attr_shweaponname4" class="customweapon span5"/>
+                            <label>Range:</label>
+                                <input type="text" name="attr_shweaponrange4" class="customweapon"/>
+                                
+                            <label>Ammo: </label>
+                                <input type="number" name="attr_shcweaponammo4" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_shmaxweaponammo4" class="customweapon"/>
+    
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_shwdtype4" style="width: 60px">
+                                    <option value="1 + @{shWB4}">1</option>
+                                    <option value="d3 + @{shWB4}">D3</option>
+                                    <option value="d6 + @{shWB4}">D6</option>
+                                    <option value="d6 + d3 + @{shWB4}">D9</option>
+                                    <option value="2d6 + @{shWB4}">2d6</option>
+                                    <option value="3d6 + @{shWB4}">3d6</option>
+                                    <option value="4d6 + @{shWB4}">4d6</option>
+                                    <option value="5d6 + @{shWB4}">5d6</option>
+                                    <option value="6d6 + @{shWB4}">6d6</option>
+                                    <option value="7d6 + @{shWB4}">7d6</option>
+                                    <option value="8d6 + @{shWB4}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_shWB4" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_shwvt4" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{shPower1}">Power</option>
+                                    <option value="@{shFinesse1}">Finesse</option>
+                                    <option value="@{shVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{shwdtype4} + @{shwvt4}" name="roll_shweapons4" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_shweapondescription4" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+								<hr>
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_shweaponquantity5" class="customweapon"/>
+                                <input type="text" name="attr_shweaponname5" class="customweapon span5"/>
+                            <label>Range:</label>
+                                <input type="text" name="attr_shweaponrange5" class="customweapon"/>
+                                
+                            <label>Ammo: </label>
+                                <input type="number" name="attr_shcweaponammo5" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_shmaxweaponammo5" class="customweapon"/>
+    
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_shwdtype5" style="width: 60px">
+                                    <option value="1 + @{shWB5}">1</option>
+                                    <option value="d3 + @{shWB5}">D3</option>
+                                    <option value="d6 + @{shWB5}">D6</option>
+                                    <option value="d6 + d3 + @{shWB5}">D9</option>
+                                    <option value="2d6 + @{shWB5}">2d6</option>
+                                    <option value="3d6 + @{shWB5}">3d6</option>
+                                    <option value="4d6 + @{shWB5}">4d6</option>
+                                    <option value="5d6 + @{shWB5}">5d6</option>
+                                    <option value="6d6 + @{shWB5}">6d6</option>
+                                    <option value="7d6 + @{shWB5}">7d6</option>
+                                    <option value="8d6 + @{shWB5}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_shWB5" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_shwvt5" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{shPower1}">Power</option>
+                                    <option value="@{shFinesse1}">Finesse</option>
+                                    <option value="@{shVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{shwdtype5} + @{shwvt5}" name="roll_shweapons5" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_shweapondescription5" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+								<hr>
+
+
+                    </div>
+                    <div class="vehiclestats1">
+                        
+                            <label>HP: </label>
+                            <input type="number" name="attr_shchp1" class="span2 customweapon"/>
+                            <label>/</label>
+                            <input type="number" name="attr_shmaxhp1" class="customweapon"/>
+                        <span class="span8"></span>
+                            <label class="span2">Shields: </label>
+                            <input type="number" name="attr_shcshp1" class="span3 customweapon"/>
+                            <label>/</label>
+                            <input type="number" name="attr_shmaxshp1" class="span3 customweapon"/>
+                        <span class="span4"></span>
+                            <label class="span2">Speed: </label> 
+                            <input type="number" name="attr_shMove" class="span3" value="6" min="0" max="50"/> 
+                            <p class="span2">squares</p>
+                        <span class="span6"></span>
+                            <button type="roll" value="/roll 1d6 + @{shFinesse1} + @{shinit6}" name="roll_APsh" class="span3 blank-roll-button">Initiative: </button> 
+                            + 
+                            <input type="number" name="attr_shinit6" class="span3" value="0" /> 
+                        
+                    </div>
+                    <div class="shipaugments1">
+                    <label>Hull Augments</label>
+                        <textarea name="attr_shhullaugdescription" class="tinybox"> </textarea>
+                    <label>Shield Augments</label>
+                        <textarea name="attr_shshiaugdescription" class="tinybox"> </textarea>
+                    <label>Engine Augments</label>
+                        <textarea name="attr_shengaugdescription" class="tinybox"> </textarea>
+                    <label>Auxilary Augments</label>
+                        <textarea name="attr_shauxaugdescription" class="tinybox"> </textarea>
+                        
+                    </div>
+                    <div class="vehiclespecials1">
+                        
+                        <label>Special Features:</label>
+                        <textarea name="attr_shipspecial" class="vewidebox"> </textarea>
+                        <div class="vehiclestations">
+                            <label class="smalltext">Captain:</label>
+                            <input type="text" name="attr_shstation1" class="customvehicletext"/>
+                            <label class="smalltext">Pilot:</label>
+                            <input type="text" name="attr_shstation2" class="customvehicletext"/>
+                            <label class="smalltext">Weapon Master:</label>
+                            <input type="text" name="attr_shstation3" class="customvehicletext"/>
+                            <label class="smalltext">Engineer:</label>
+                            <input type="text" name="attr_shstation4" class="customvehicletext"/>
+                            <label class="smalltext">Cerographist:</label>
+                            <input type="text" name="attr_shstation5" class="customvehicletext"/>
+                            <label class="smalltext">Arcane Specialist:</label>
+                            <input type="text" name="attr_shstation6" class="customvehicletext"/>
+                            
+                            <input type="text" name="attr_shstation7" value="Crewmate" class="span2 customvehicletext"/>
+                            <input type="text" name="attr_shstation8" value="Crewmate" class="span2 customvehicletext"/>
+                            <input type="text" name="attr_shstation9" value="Crewmate" class="span2 customvehicletext"/>
+                            <input type="text" name="attr_shstation10" value="Crewmate" class="span2 customvehicletext"/>
+                        </div>
+                    </div>
+                    <div class="vehicleexpertise1">
+                        <label>Ship Expertise:</label>
+                        <textarea name="attr_shipexpertise" class="velongbox"> </textarea>
+                    </div>
+                    <div class="vehiclecargo1">
+                        <label>Cargo Manifest:</label>
+                        <textarea name="attr_shipcargo" class="velongbox"> </textarea>
+                    </div>
+                    </div>
+                    <hr>
+                    <!--
+                        <script type="text/worker">
+                                on('sheet:opened change:shfuelcur1 change:shfuelmax1', function() {
+                                    getAttrs(['shfuelcur1', 'shfuelmax1'], function(values) {
+                                        // make sure the maximum and current values are numbers; using +value || 0 is one way to do this.
+                                        const maximum = +values.shfuelmax1 || 0;
+                                        const current = +values.shfuelcur1 || 0;
+                                        // get the percentage value
+                                        const percent = (current / maximum) || 0;
+                                        // it looks like you want to round up to increments of 10%, so 33% would be reported as 4.
+                                        // the following does that, and if over 100% reports 999.
+                                        const tvalue = percent > 1 ? 999 : Math.ceil(percent * 10);
+                                        console.log('fuelic value is ' + tvalue);
+                                
+                                        setAttrs({
+                                            'fuelicv1':tvalue
+                                        });
+                                    });
+                                });
+                        </script>
+                        //-->
+
+                </fieldset>
+            </div>
+            
+            
+            <div class='mechs repeatscroll'>
+                
+                <fieldset class="repeating_mewe">
+                    <div class="vehiclemain">
+                    <div class="vehicleid">
+                    <label class="span3">Name or ID:</label>
+                    <input type="text" name="attr_mech_Name" class="span7"/>
+                    <label class="centertext">Size:</label>
+                    <input type="text" name="attr_mechclass" class="span4 empty-field"/>
+                    <label class="span3 centertext">Origin:</label>
+                    <input type="text" name="attr_mechorigin" class="span2 empty-field"/>
+                        <label class="span2">Fuel Capacity: </label>
+                           <input type="number" name="attr_mefuelcur1" class="span4 customvehicletext" value="0" min="0"/>
+                            <label class="centertext">/</label>
+                            <input type="number" name="attr_mefuelmax1" class="span3 customvehicletext" value="0" min="0"/>
+                            <!--
+                        <input type='hidden' type='number' value='@{fuelicv1}' name="attr_mefuelbar" class="sheet-hidden sheet-fuelbar" disabled='true'>
+                            <div class="span10 sheet-fuelbar"></div>
+                        //-->
+                    </div>
+                    
+                    <div class="vehiclevirtues">
+                            <button type="roll" value="/roll @{mepower1}d6cf<2cs>5 + @{mepowerp1}d6cf<2cs>5" name="roll_mePowerCheck1" class='center blank-roll-button'>Power</button>
+                            <button type="roll" value="/roll @{mefinesse1}d6cf<2cs>5 + @{mefinessep1}d6cf<2cs>5" name="roll_meFinesseCheck1" class='center blank-roll-button'>Finesse</button>
+                            <button type="roll" value="/roll @{mevitality1}d6cf<2cs>5 + @{mevitalityp1}d6cf<2cs>5" name="roll_meVitalityCheck1" class='center blank-roll-button'>Vitality</button>
+                            <input type="number" name="attr_mepower1" class='center' value="3" min="1" max="15"/>
+                            <input type="number" name="attr_mefinesse1" class='center' value="3" min="1" max="15"/>
+                            <input type="number" name="attr_mevitality1" class='center' value="3" min="1" max="15"/>
+                            <label class=" centertext tentext">+Bonus Dice</label>
+                            <label class=" centertext tentext">+Bonus Dice</label>
+                            <label class=" centertext tentext">+Bonus Dice</label>
+                            <input type="number" name="attr_mepowerp1" class='Virtue center' value="0" min="0" max="15"/>
+                            <input type="number" name="attr_mefinessep1" class='Virtue center' value="0" min="0" max="15"/>
+                            <input type="number" name="attr_mevitalityp1" class='Virtue center' value="0" min="0" max="15"/>
+                    </div>
+                    <div class="vehiclesym">
+                        <div class="modegrid">
+                            <label class='smalltext'>Stellar</label>
+                            <input type="checkbox" name="attr_veairbox" value="1" class='centre' />
+                            <label class='smalltext'>Aerial</label>
+                            <input type="checkbox" name="attr_veairbox" value="1" class='centre' />
+                            <label class='smalltext'>Aquatic</label>
+                            <input type="checkbox" name="attr_veairbox" value="1" class='centre' />
+                            <label class='smalltext'>Terrain</label>
+                            <input type="checkbox" name="attr_veairbox" value="1" class='centre' />
+                        </div>
+                    </div>
+                    <div class="vehicscroll">
+                        
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                            <input type="number" name="attr_meweaponquantity1" class="customweapon"/>
+                            <input type="text" name="attr_meweaponname1" class="customweapon span5"/>
+                            <label>Range:</label>
+                            <input type="text" name="attr_meweaponrange1" class="customweapon"/>
+                            
+                            <label>Ammo: </label>
+                            <input type="number" name="attr_mecweaponammo1" class="customweapon"/>
+                            <label>/</label>
+                            <input type="number" name="attr_memaxweaponammo1" class="customweapon"/>
+
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_mewdtype1" style="width: 60px">
+                                    <option value="1 + @{meWB1}">1</option>
+                                    <option value="d3 + @{meWB1}">D3</option>
+                                    <option value="d6 + @{meWB1}">D6</option>
+                                    <option value="d6 + d3 + @{meWB1}">D9</option>
+                                    <option value="2d6 + @{meWB1}">2d6</option>
+                                    <option value="3d6 + @{meWB1}">3d6</option>
+                                    <option value="4d6 + @{meWB1}">4d6</option>
+                                    <option value="5d6 + @{meWB1}">5d6</option>
+                                    <option value="6d6 + @{meWB1}">6d6</option>
+                                    <option value="7d6 + @{meWB1}">7d6</option>
+                                    <option value="8d6 + @{meWB1}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_meWB1" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_mewvt1" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{mePower1}">Power</option>
+                                    <option value="@{meFinesse1}">Finesse</option>
+                                    <option value="@{meVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{mewdtype1} + @{mewvt1}" name="roll_meweapons1" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_meweapondescription1" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+                                <hr>
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_meweaponquantity2" class="customweapon"/>
+                                <input type="text" name="attr_meweaponname2" class="customweapon span5"/>
+                            <label>Range:</label>
+                                <input type="text" name="attr_meweaponrange2" class="customweapon"/>
+                                
+                            <label>Ammo: </label>
+                                <input type="number" name="attr_mecweaponammo2" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_memaxweaponammo2" class="customweapon"/>
+    
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_mewdtype2" style="width: 60px">
+                                    <option value="1 + @{meWB2}">1</option>
+                                    <option value="d3 + @{meWB2}">D3</option>
+                                    <option value="d6 + @{meWB2}">D6</option>
+                                    <option value="d6 + d3 + @{meWB2}">D9</option>
+                                    <option value="2d6 + @{meWB2}">2d6</option>
+                                    <option value="3d6 + @{meWB2}">3d6</option>
+                                    <option value="4d6 + @{meWB2}">4d6</option>
+                                    <option value="5d6 + @{meWB2}">5d6</option>
+                                    <option value="6d6 + @{meWB2}">6d6</option>
+                                    <option value="7d6 + @{meWB2}">7d6</option>
+                                    <option value="8d6 + @{meWB2}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_meWB2" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_mewvt2" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{mePower1}">Power</option>
+                                    <option value="@{meFinesse1}">Finesse</option>
+                                    <option value="@{meVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{mewdtype2} + @{mewvt2}" name="roll_meweapons2" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_meweapondescription2" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+								<hr>
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_meweaponquantity3" class="customweapon"/>
+                                <input type="text" name="attr_meweaponname3" class="customweapon span5"/>
+                            <label>Range:</label>
+                                <input type="text" name="attr_meweaponrange3" class="customweapon"/>
+                                
+                            <label>Ammo: </label>
+                                <input type="number" name="attr_mecweaponammo3" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_memaxweaponammo3" class="customweapon"/>
+    
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_mewdtype3" style="width: 60px">
+                                    <option value="1 + @{meWB3}">1</option>
+                                    <option value="d3 + @{meWB3}">D3</option>
+                                    <option value="d6 + @{meWB3}">D6</option>
+                                    <option value="d6 + d3 + @{meWB3}">D9</option>
+                                    <option value="2d6 + @{meWB3}">2d6</option>
+                                    <option value="3d6 + @{meWB3}">3d6</option>
+                                    <option value="4d6 + @{meWB3}">4d6</option>
+                                    <option value="5d6 + @{meWB3}">5d6</option>
+                                    <option value="6d6 + @{meWB3}">6d6</option>
+                                    <option value="7d6 + @{meWB3}">7d6</option>
+                                    <option value="8d6 + @{meWB3}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_meWB3" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_mewvt3" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{mePower1}">Power</option>
+                                    <option value="@{meFinesse1}">Finesse</option>
+                                    <option value="@{meVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{mewdtype3} + @{mewvt3}" name="roll_meweapons3" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_meweapondescription3" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+								<hr>
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_meweaponquantity4" class="customweapon"/>
+                                <input type="text" name="attr_meweaponname4" class="customweapon span5"/>
+                            <label>Range:</label>
+                                <input type="text" name="attr_meweaponrange4" class="customweapon"/>
+                                
+                            <label>Ammo: </label>
+                                <input type="number" name="attr_mecweaponammo4" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_memaxweaponammo4" class="customweapon"/>
+    
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_mewdtype4" style="width: 60px">
+                                    <option value="1 + @{meWB4}">1</option>
+                                    <option value="d3 + @{meWB4}">D3</option>
+                                    <option value="d6 + @{meWB4}">D6</option>
+                                    <option value="d6 + d3 + @{meWB4}">D9</option>
+                                    <option value="2d6 + @{meWB4}">2d6</option>
+                                    <option value="3d6 + @{meWB4}">3d6</option>
+                                    <option value="4d6 + @{meWB4}">4d6</option>
+                                    <option value="5d6 + @{meWB4}">5d6</option>
+                                    <option value="6d6 + @{meWB4}">6d6</option>
+                                    <option value="7d6 + @{meWB4}">7d6</option>
+                                    <option value="8d6 + @{meWB4}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_meWB4" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_mewvt4" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{mePower1}">Power</option>
+                                    <option value="@{meFinesse1}">Finesse</option>
+                                    <option value="@{meVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{mewdtype4} + @{mewvt4}" name="roll_meweapons4" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_meweapondescription4" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+								<hr>
+                        <div class="vehicleweapons">
+                            <label class="smalltext endtext">Quantity:</label>
+                            <label class="span5">Weapon Name:</label>
+                                <input type="number" name="attr_meweaponquantity5" class="customweapon"/>
+                                <input type="text" name="attr_meweaponname5" class="customweapon span5"/>
+                            <label>Range:</label>
+                                <input type="text" name="attr_meweaponrange5" class="customweapon"/>
+                                
+                            <label>Ammo: </label>
+                                <input type="number" name="attr_mecweaponammo5" class="customweapon"/>
+                                <label>/</label>
+                                <input type="number" name="attr_memaxweaponammo5" class="customweapon"/>
+    
+                            <div class="vewedam span6">    
+                                <label>Damage:</label>
+                                <select name="attr_mewdtype5" style="width: 60px">
+                                    <option value="1 + @{meWB5}">1</option>
+                                    <option value="d3 + @{meWB5}">D3</option>
+                                    <option value="d6 + @{meWB5}">D6</option>
+                                    <option value="d6 + d3 + @{meWB5}">D9</option>
+                                    <option value="2d6 + @{meWB5}">2d6</option>
+                                    <option value="3d6 + @{meWB5}">3d6</option>
+                                    <option value="4d6 + @{meWB5}">4d6</option>
+                                    <option value="5d6 + @{meWB5}">5d6</option>
+                                    <option value="6d6 + @{meWB5}">6d6</option>
+                                    <option value="7d6 + @{meWB5}">7d6</option>
+                                    <option value="8d6 + @{meWB5}">8d6</option>
+                                </select>
+                                <span></span>
+                                +
+                                <span></span>
+                                <input type="number" name="attr_meWB5" class="customweapon" value="0" min="0" max="99"/>
+                                +
+                                <select name="attr_mewvt5" style="width: 70px">
+                                    <option value="0">None</option>
+                                    <option value="@{mePower1}">Power</option>
+                                    <option value="@{meFinesse1}">Finesse</option>
+                                    <option value="@{meVitality1}">Vitality</option>
+                                </select>
+                                <button type="roll" value="/roll @{mewdtype5} + @{mewvt5}" name="roll_meweapons5" class="blank-roll-button">Roll Damage</button>
+                            </div>
+                                <div class="weap-descript">
+                                <label class="span6">Description:</label>
+                                <textarea name="attr_meweapondescription5" class="veweaponbox"> </textarea>
+                                </div>
+                        </div>
+								<hr>
+
+
+                    </div>
+                    <div class="vehiclestats1">
+                        
+                            <label>HP: </label>
+                            <input type="number" name="attr_mechp1" class="span2 customweapon"/>
+                            <label>/</label>
+                            <input type="number" name="attr_memaxhp1" class="customweapon"/>
+                        <span class="span8"></span>
+                            <label class="span2">Shields: </label>
+                            <input type="number" name="attr_mecshp1" class="span3 customweapon"/>
+                            <label>/</label>
+                            <input type="number" name="attr_memaxshp1" class="span3 customweapon"/>
+                        <span class="span4"></span>
+                            <label class="span2">Speed: </label> 
+                            <input type="number" name="attr_meMove" class="span3" value="6" min="0" max="50"/> 
+                            <p class="span2">squares</p>
+                        <span class="span6"></span>
+                            <button type="roll" value="/roll 1d6 + @{meFinesse1} + @{shinit6}" name="roll_APsh" class="span3 blank-roll-button">Initiative: </button> 
+                            + 
+                            <input type="number" name="attr_meinit6" class="span3" value="0" /> 
+                        
+                    </div>
+                    <div class="shipaugments1">
+                    <label>Special Features:</label>
+                        <textarea name="attr_mespfedescription" class="vemedlbox"> </textarea>
+                    <label>Augments</label>
+                        <textarea name="attr_meaugdescription" class="vemedlbox"> </textarea>
+                        
+                    </div>
+                    </div>
+                    <hr>
+                    <!--
+                        <script type="text/worker">
+                                on('sheet:opened change:mefuelcur1 change:mefuelmax1', function() {
+                                    getAttrs(['mefuelcur1', 'mefuelmax1'], function(values) {
+                                        // make sure the maximum and current values are numbers; using +value || 0 is one way to do this.
+                                        const maximum = +values.mefuelmax1 || 0;
+                                        const current = +values.mefuelcur1 || 0;
+                                        // get the percentage value
+                                        const percent = (current / maximum) || 0;
+                                        // it looks like you want to round up to increments of 10%, so 33% would be reported as 4.
+                                        // the following does that, and if over 100% reports 999.
+                                        const tvalue = percent > 1 ? 999 : Math.ceil(percent * 10);
+                                        console.log('fuelic value is ' + tvalue);
+                                
+                                        setAttrs({
+                                            'fuelicv1':tvalue
+                                        });
+                                    });
+                                });
+                        </script>
+                        //-->
+                </fieldset>
+                
+            </div>
+              
+            <script type="text/worker">
+                const buttonlist = ["vehicles","ships","mechs"];
+                buttonlist.forEach(button => {
+                    on(`clicked:${button}`, function() {
+                        setAttrs({
+                            sheetTab2: button
+                        });
+                    });
+                });
+            </script>
+                
+            
+                
+        </div>
+        
+    </div>
+    
+    
+    
+    <div class="global-container3 sheet-tab-content sheet-tab3">
+        <div class="levelsec1A repeatscroll">
+            <div>
+                <h3>Base Class:</h3>
+                <select name="attr_classbase">
+                    <option value="1">---------</option>
+                    <option value="2">Architect</option>
+                    <option value="3">Combat Medic</option>
+                    <option value="4">Field Knight</option>
+                    <option value="5">Mechromancer</option>
+                    <option value="6">Mimic</option>
+                    <option value="7">Naturalist</option>
+                    <option value="8">Negotiator</option>
+                    <option value="9">Smuggler</option>
+                    <option value="10">Soldier</option>
+                    <option value="11">Thaumatech</option>
+                    <option value="12">Homebrew</option>
+                </select>
+                
+                <input class="class class1" type="checkbox" name="attr_classbase" value="1"><!-- None-->
+                <input class="class class2" type="checkbox" name="attr_classbase" value="2"><!-- Architect-->
+                <input class="class class3" type="checkbox" name="attr_classbase" value="3"><!-- Combat Medic-->
+                <input class="class class4" type="checkbox" name="attr_classbase" value="4"><!-- Field Knight-->
+                <input class="class class5" type="checkbox" name="attr_classbase" value="5"><!-- Mechromancer-->
+                <input class="class class6" type="checkbox" name="attr_classbase" value="6"><!-- Mimic-->
+                <input class="class class7" type="checkbox" name="attr_classbase" value="7"><!-- Naturalist-->
+                <input class="class class8" type="checkbox" name="attr_classbase" value="8"><!-- Negotiator-->
+                <input class="class class9" type="checkbox" name="attr_classbase" value="9"><!-- Smuggler-->
+                <input class="class class10" type="checkbox" name="attr_classbase" value="10"><!-- Soldier-->
+                <input class="class class11" type="checkbox" name="attr_classbase" value="11"><!-- Thaumatech-->
+                <input class="class class12" type="checkbox" name="attr_classbase" value="12"><!-- Homebrew-->
+                
+                <div class="classbase_empty">
+                    <select name='attr_class1'>
+                    <option>Primary Class</option>
+                    <option>Architect</option>
+                    <option>Combat Medic</option>
+                    <option>Field Knight</option>
+                    <option>Mechromancer</option>
+                    <option>Mimic</option>
+                    <option>Naturalist</option>
+                    <option>Negotiator</option>
+                    <option>Smuggler</option>
+                    <option>Soldier</option>
+                    <option>Thaumatech</option>
+                    </select>
+                    
+                    <input type="text" name='attr_secondclass' placeholder="Secondary Class" />
+                    
+                    <select name='attr_class2'>
+                        <option>Specialization</option>
+                        <option>Technician</option>
+                        <option>SpecTech</option>
+                        <option>Tinkerer</option>
+                        <option>Contentious Objector</option>
+                        <option>Sawbones</option>
+                        <option>Tactician</option>
+                        <option>Preserver</option>
+                        <option>Warlord</option>
+                        <option>Juggernaut</option>
+                        <option>Spirit Commander</option>
+                        <option>Ethercist</option>
+                        <option>Wraithlord</option>
+                        <option>Chrono Dreamer</option>
+                        <option>Imitator</option>
+                        <option>Delusionist</option>
+                        <option>The Archetype</option>
+                        <option>Contractor</option>
+                        <option>Fate Weaver</option>
+                        <option>The Agent</option>
+                        <option>The Captain</option>
+                        <option>The Ambassador</option>
+                        <option>Gunrunner</option>
+                        <option>Swindler</option>
+                        <option>Bounty Hunter</option>
+                        <option>Soldier of Change</option>
+                        <option>Adaptech</option>
+                        <option>Operator Code</option>
+                        <option>Shade Caller</option>
+                        <option>The Runesmith</option>
+                        <option>Shade Caller</option>
+                    </select>
+                </div>
+                
+                <div class="classbase_architect">
+                    <select name='attr_classa2'>
+                        <option>...</option>
+                        <option>Technician</option>
+                        <option>SpecTech</option>
+                        <option>Tinkerer</option>
+                    </select>
+                    
+                    
+                </div>
+                
+                <div class="classbase_combatmedic">
+                    
+                    <select name='attr_classb2'>
+                        <option>...</option>
+                        <option>Contentious Objector</option>
+                        <option>Sawbones</option>
+                        <option>Tactician</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_fieldknight">
+                    
+                    <select name='attr_classc2'>
+                        <option>...</option>
+                        <option>Preserver</option>
+                        <option>Warlord</option>
+                        <option>Juggernaut</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_mechromancer">
+                    
+                    <select name='attr_classd2'>
+                        <option>...</option>
+                        <option>Spirit Commander</option>
+                        <option>Ethercist</option>
+                        <option>Wraithlord</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_mimic">
+                    
+                    <select name='attr_classe2'>
+                        <option>...</option>
+                        <option>Chrono Dreamer</option>
+                        <option>Imitator</option>
+                        <option>Delusionist</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_naturalist">
+                    
+                    <select name='attr_classf2'>
+                        <option>...</option>
+                        <option>The Archetype</option>
+                        <option>Contractor</option>
+                        <option>Fate Weaver</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_negotiator">
+                    
+                    <select name='attr_classg2'>
+                        <option>...</option>
+                        <option>The Agent</option>
+                        <option>The Captain</option>
+                        <option>The Ambassador</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_smuggler">
+                    
+                    <select name='attr_classh2'>
+                        <option>...</option>
+                        <option>Gunrunner</option>
+                        <option>Swindler</option>
+                        <option>Bounty Hunter</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_soldier">
+                    
+                    <select name='attr_classi2'>
+                        <option>...</option>
+                        <option>Soldier of Change</option>
+                        <option>Adaptech</option>
+                        <option>Operator Code</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_thaumatech">
+                    
+                    <select name='attr_classj2'>
+                        <option>...</option>
+                        <option>Shade Caller</option>
+                        <option>The Runesmith</option>
+                        <option>Shade Caller</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="classbase_homebrew">
+                    
+                    <input type="text" name='attr_classname1' placeholder="Class Name" />
+                    <input type="text" name='attr_classspec1' placeholder="Specialization" />
+                    
+                </div>
+            </div>
+        
+        <div class="classcell">
+            <select name='attr_classstart1' style="width: 120px">
+                <option>Starting Ability</option>
+                <option>Level 1</option>
+            </select>
+            <input type="checkbox" name='attr_checkprof' value="1" class='centre' />
+            <label class="close tentext">Expertise / Proficiency</label>
+            <input type="checkbox" name='attr_checkcomb' value="1" class='centre' />
+            <label class="close tentext">Combat Ability</label>
+            <input type="text" name="attr_classnames1" class="100text" placeholder="Class Name" />
+            <input type="checkbox" name='attr_checkskill' value="1" class='centre' />
+            <label class="close tentext">Skill Bonus</label>
+            <input type="checkbox" name='attr_checkvirtue' value="1" class='centre' />
+            <label class="close tentext">Virtue Increase</label>
+            <input type="text" name="attr_abilitys1name" class="150text span3" placeholder="Ability Name" />
+            <input type="checkbox" name='attr_checkclassex' value="1" class='centre' />
+            <label class="close tentext">Class Exclusive</label>
+            <textarea name='attr_classstart1de' class="levelbox" placeholder="Ability Details"> </textarea>
+            
+        </div>
+        
+        <div class="classcell">
+            <select name='attr_classstart2' style="width: 120px">
+                <option>Starting Ability</option>
+                <option>Level 1</option>
+                <option>Level 2</option>
+            </select>
+            <input type="checkbox"  name='attr_checkexprof' value="1" class='centre' />
+            <label class="close tentext">Expertise / Proficiency</label>
+            <input type="checkbox" name='attr_checkcombclass' value="1" class='centre' />
+            <label class="close tentext">Combat Ability</label>
+            <input type="text" name="attr_classnames2" class="100text" placeholder="Class Name" />
+            <input type="checkbox" name='attr_checkskillclass' value="1" class='centre' />
+            <label class="close tentext">Skill Bonus</label>
+            <input type="checkbox"  name='attr_checkvirtueclass' value="1" class='centre' />
+            <label class="close tentext">Virtue Increase</label>
+            <input type="text" name="attr_abilitys2name" class="150text span3" placeholder="Ability Name" />
+            <input type="checkbox" name='attr_checkclassexclass' value="1" class='centre' />
+            <label class="close tentext">Class Exclusive</label>
+            <textarea name='attr_classstart2de' class="levelbox" placeholder="Ability Details"> </textarea>
+            
+        </div>
+   
+        <div class="span3">    
+            <fieldset class="repeating_classleveling">
+                <div class="levelrow">
+                <div class="classcell">
+                    <select name="attr_classlevela" style="width: 120px">
+                        <option>Level 1</option>
+                        <option>Level 2</option>
+                        <option>Level 3</option>
+                        <option>Level 4</option>
+                        <option>Level 5</option>
+                        <option>Level 6</option>
+                        <option>Level 7</option>
+                        <option>Level 8</option>
+                        <option>Level 9</option>
+                        <option>Level 10</option>
+                        <option>Level 11</option>
+                        <option>Level 12</option>
+                        <option>Level 13</option>
+                        <option>Level 14</option>
+                        <option>Level 15</option>
+                        <option>Level 16</option>
+                        <option>Level 17</option>
+                        <option>Level 18</option>
+                        <option>Level 19</option>
+                        <option>Level 20</option>
+                        <option>Level +</option>
+                    </select>
+                    <input type="checkbox"  name='attr_checkexprofa' value="1" class='centre' />
+                    <label class="close tentext">Expertise / Proficiency</label>
+                    <input type="checkbox" name='attr_checkcombclassa' value="1" class='centre' />
+                    <label class="close tentext">Combat Ability</label>
+                    <input type="text" name="attr_classnamea" class="100text" placeholder="Class Name" />
+                    <input type="checkbox" name='attr_checkskillclassa' value="1" class='centre' />
+                    <label class="close tentext">Skill Bonus</label>
+                    <input type="checkbox"  name='attr_checkvirtueclassa' value="1" class='centre' />
+                    <label class="close tentext">Virtue Increase</label>
+                    <input type="text" name="attr_abilityaname" class="150text span3" placeholder="Ability Name" />
+                    <input type="checkbox" name='attr_checkclassexclassa' value="1" class='centre' />
+                    <label class="close tentext">Class Exclusive</label>
+                    <textarea name="attr_classlevelade" class="levelbox" placeholder="Ability Details"> </textarea>
+            
+                </div>
+                
+                <div class="classcell">
+                    <select name="attr_classlevelb" style="width: 120px">
+                        <option>Level 1</option>
+                        <option>Level 2</option>
+                        <option>Level 3</option>
+                        <option>Level 4</option>
+                        <option>Level 5</option>
+                        <option>Level 6</option>
+                        <option>Level 7</option>
+                        <option>Level 8</option>
+                        <option>Level 9</option>
+                        <option>Level 10</option>
+                        <option>Level 11</option>
+                        <option>Level 12</option>
+                        <option>Level 13</option>
+                        <option>Level 14</option>
+                        <option>Level 15</option>
+                        <option>Level 16</option>
+                        <option>Level 17</option>
+                        <option>Level 18</option>
+                        <option>Level 19</option>
+                        <option>Level 20</option>
+                        <option>Level +</option>
+                    </select>
+                    <input type="checkbox"  name='attr_checkexprofb' value="1" class='centre' />
+                    <label class="close tentext">Expertise / Proficiency</label>
+                    <input type="checkbox" name='attr_checkcombclassb' value="1" class='centre' />
+                    <label class="close tentext">Combat Ability</label>
+                    <input type="text" name="attr_classnameb" class="100text" placeholder="Class Name" />
+                    <input type="checkbox" name='attr_checkskillclassb' value="1" class='centre' />
+                    <label class="close tentext">Skill Bonus</label>
+                    <input type="checkbox"  name='attr_checkvirtueclassb' value="1" class='centre' />
+                    <label class="close tentext">Virtue Increase</label>
+                    <input type="text" name="attr_abilitybname" class="150text span3" placeholder="Ability Name" />
+                    <input type="checkbox" name='attr_checkclassexclassb' value="1" class='centre' />
+                    <label class="close tentext">Class Exclusive</label>
+                    <textarea name="attr_classlevelbde" class="levelbox" placeholder="Ability Details"> </textarea>
+            
+                </div>
+                
+                <div class="classcell">
+                    <select name="attr_classlevelc" style="width: 120px">
+                        <option>Level 1</option>
+                        <option>Level 2</option>
+                        <option>Level 3</option>
+                        <option>Level 4</option>
+                        <option>Level 5</option>
+                        <option>Level 6</option>
+                        <option>Level 7</option>
+                        <option>Level 8</option>
+                        <option>Level 9</option>
+                        <option>Level 10</option>
+                        <option>Level 11</option>
+                        <option>Level 12</option>
+                        <option>Level 13</option>
+                        <option>Level 14</option>
+                        <option>Level 15</option>
+                        <option>Level 16</option>
+                        <option>Level 17</option>
+                        <option>Level 18</option>
+                        <option>Level 19</option>
+                        <option>Level 20</option>
+                        <option>Level +</option>
+                    </select>
+                    <input type="checkbox"  name='attr_checkexprofc' value="1" class='centre' />
+                    <label class="close tentext">Expertise / Proficiency</label>
+                    <input type="checkbox" name='attr_checkcombclassc' value="1" class='centre' />
+                    <label class="close tentext">Combat Ability</label>
+                    <input type="text" name="attr_classnamec" class="100text" placeholder="Class Name" />
+                    <input type="checkbox" name='attr_checkskillclassc' value="1" class='centre' />
+                    <label class="close tentext">Skill Bonus</label>
+                    <input type="checkbox"  name='attr_checkvirtueclassc' value="1" class='centre' />
+                    <label class="close tentext">Virtue Increase</label>
+                    <input type="text" name="attr_abilitycname" class="150text span3" placeholder="Ability Name" />
+                    <input type="checkbox" name='attr_checkclassexclassc' value="1" class='centre' />
+                    <label class="close tentext">Class Exclusive</label>
+                    <textarea name="attr_classlevelcde" class="levelbox" placeholder="Ability Details"> </textarea>
+            
+                </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    
+        <div class="levelsec2A">
+        <h3>Expertise & Traits</h3>
+        
+            <select name="attr_expertise" style="width: 120px">
+            	<option value="1">Expertise</option>
+                <option value="2">Traits</option>
+                <option value="2">Consequences</option>
+            </select>
+            
+              <input class="expert expert1" type="checkbox" name="attr_expertise" value="1"><!-- Expertise -->
+              <input class="expert expert2" type="checkbox" name="attr_expertise" value="2"><!-- Traits -->
+              <input class="expert expert3" type="checkbox" name="attr_expertise" value="3"><!-- Consequences -->
+            
+            
+              <div class="experttraits-expertise repeatscroll">
+                <fieldset class="repeating_experters">
+                <div class="expertisegrid">
+                    <select name="attr_gexpertisesource" style="width: 100px">
+                		<option>Creation</option>
+                		<option>Class</option>
+                		<option>Earned</option>
+                	</select>
+                    <input type="text" name="attr_expertisename" class="200text" placeholder="Expertise Name" />
+                <div>
+                	<label class="close tentext" name="attr_expertisecost">Cost</label>
+                	<select name="attr_gexpertisecost" style="width: 60px">
+                		<option>1</option>
+                		<option>2</option>
+                		<option>3</option>
+                	</select>
+                </div>
+                	<input type="checkbox" name="attr_checkuniqueex" value="1" class='centre' />
+                	<label class="tentext">Unique</label>
+                <textarea name='attr_expertisede' class="expertbox"> </textarea>
+                </div>
+                </fieldset>
+              </div>
+            
+              <div class="experttraits-traits repeatscroll">
+                <fieldset class="repeating_traiters">
+                <div class="traitsgrid">
+                    <select name="attr_gtraittype" style="width: 80px">
+                		<option>Racial</option>
+                		<option>Ancestry</option>
+                	</select>
+                	<input type="text" name="attr_traitname"  class="100text" placeholder="Trait Name" />
+                	<input type="checkbox" name="attr_traitcomb" value="1" class='centre' />
+                	<label class="tentext">Combat Ability</label>
+                	<input type="checkbox" name="attr_traitpass" value="1" class='centre' />
+                	<label class="tentext">Passive</label>
+                	<textarea name='attr_traitde' class="expertbox"> </textarea>
+                </div>
+                </fieldset>
+            </div>       
+            
+            <div class="experttraits-cons repeatscroll">
+                <fieldset class="repeating_consequences">
+                <div class="consgrid">
+                    <select name="attr_gconsesource" style="width: 100px">
+                		<option>Creation</option>
+                		<option>Class</option>
+                		<option>Earned</option>
+                	</select>
+                    <input type="text" name="attr_consname" class="200text" placeholder="Expertise Name" />
+                <div>
+                	<label class="close tentext" name="attr_conscost">Cost</label>
+                	<select name="attr_gconscost" style="width: 60px">
+                		<option>1</option>
+                		<option>2</option>
+                		<option>3</option>
+                	</select>
+                </div>
+                	<input type="checkbox" name="attr_checkuniquecon" value="1" class='centre' />
+                	<label class="tentext">Custom</label>
+                <textarea name='attr_consde' class="expertbox"> </textarea>
+                </div>
+                </fieldset>
+            </div>
+            
+        </div>
+
+        <div class="levelsec2B">
+        <h3>Story Class</h3>
+        <div class="repeatscroll">
+        <fieldset class="repeating_storyclass">
+            <div class="classcell">
+                    <select name="attr_storylevelselect" style="width: 120px">
+                        <option>Level 1</option>
+                        <option>Level 2</option>
+                        <option>Level 3</option>
+                        <option>Level 4</option>
+                        <option>Level 5</option>
+                        <option>Level 6</option>
+                        <option>Level 7</option>
+                        <option>Level 8</option>
+                        <option>Level 9</option>
+                        <option>Level 10</option>
+                        <option>Level 11</option>
+                        <option>Level 12</option>
+                        <option>Level 13</option>
+                        <option>Level 14</option>
+                        <option>Level 15</option>
+                        <option>Level 16</option>
+                        <option>Level 17</option>
+                        <option>Level 18</option>
+                        <option>Level 19</option>
+                        <option>Level 20</option>
+                        <option>Level +</option>
+                    </select>
+                    <input type="checkbox" name="attr_storyclassexpgain" value="1" class='centre' />
+                    <label class="close tentext">Expertise Gain</label>
+                    <input type="checkbox" name="attr_storyclasscombabil" value="1" class='centre' />
+                    <label class="close tentext">Combat Ability</label>
+                    <input type="text" class="100text" name="attr_storyclassname" placeholder="Class Name" />
+                    <input type="checkbox" name="attr_storyclassskillbonus" value="1" class='centre' />
+                    <label class="close tentext">Skill Bonus</label>
+                    <input type="checkbox" name="attr_storyclassprof" value="1" class='centre' />
+                    <label class="close tentext">Proficiency</label>
+                    <input type="text" class="150text span3" placeholder="Ability Name" />
+                    <input type="checkbox" name="attr_storyclassequip" value="1" class='centre' />
+                    <label class="close tentext">New Equipment</label>
+                    <textarea class="levelbox" name="attr_storyclassde" placeholder="Ability Details"> </textarea>
+            
+                </div>
+        </fieldset>
+            
+        </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="global-container4 sheet-tab-content sheet-tab4">
+        
+        <div class="spellsec1A">    
+            <input type="text" class="200text" placeholder="Spellcasting Class" />
+            <label class="tentext">Maximum Spellcasting Level</label>
+            <select name="attr_casterlevel" style="width: 100px" >
+                <option>-----</option>
+                <option>Novice</option>
+                <option>Apprentice</option>
+                <option>Adept</option>
+                <option>Magus</option>
+                <option>Superlative</option>
+            </select>
+            <div class="repeatscroll overchargewarn">
+            <p class="spellwarning">Every spell cast that has a cooldown or a difficulty causes the charge state for the realm of the spell's origin to increase by 1 to a maximum of 12. Mystic spells and spells with no cooldown and/or difficulty do not add to the Charge State. After a realm has a charge state of 6, further spells cast from the same realm have the difficulty increased by +1 level, cooldowns increased by +2 rounds, and are made with -1 bonus die when using the Arcanting skill. This debuff lasts until the charge state of the realm drops under 6. You ignore the Charge State (even at 6+ points) while casting a spell fully inside its realm of origin. Taking a short rest reduces all the player's charge state by 6, a long rest reduces them to 0.</p>
+            </div>
+        </div>
+        
+        <div class="spellsec1B">      
+            <div>
+                <label>Realm Energized States</label>
+            </div>
+            <div class="energizedrealmstates hozscroll">
+                
+                <!-- 
+                <button type="action" name="act_activate">Reset</button>
+                <script type="text/worker">
+                    on("clicked:activate" {
+                    setAttrs({
+                              nrgchargestate: 0
+                          });
+                    });
+                </script> -->
+                    
+                <fieldset class="repeating_energized">
+                 
+                    <input type="text" name="attr_nrgrealmname" class="100text" placeholder="Realm Name" />
+                    <input type="number" name="attr_nrgchargestate" value="0" min="0" class="nrgvalue" />
+                 
+                </fieldset>
+            </div>
+        </div>
+            
+        <div class="spellsec2A repeatscroll">
+            <label>Spells</label>
+            <fieldset class="repeating_spells">
+            <div class="spellcell">
+                <input type="text" name="attr_spelloriginselect" class="100text" placeholder="Realm Origin" />
+                <input type="text" name="attr_spellnametext" class="150text span6" placeholder="Spell Name" />
+                <input type="checkbox" name="attr_spellexclusive" value="1" class="centre centertext" />
+                <label class="close tentext centertext">Class Exclusive</label>
+                <select style="width: 100px" name="attr_spelllevelselect" class="span3">
+                    <option>-----</option>
+                    <option>Novice</option>
+                    <option>Apprentice</option>
+                    <option>Adept</option>
+                    <option>Magus</option>
+                    <option>Superlative</option>
+                </select>
+                <label class="tentext">Duration</label>
+                <input type="number" name="attr_spelldurationnumber" value="0" min="0" class="span2" />
+                <select name="attr_spelldurationselect" style="width: 90px" class="span3">
+                    <option>Rounds</option>
+                    <option>Seconds</option>
+                    <option>Minutes</option>
+                    <option>Hours</option>
+                    <option>Days</option>
+                    <option>Weeks</option>
+                    <option>Months</option>
+                    <option>Years</option>
+                </select>
+                  <select name="attr_spelldifficultyselect" style="width: 100px" class="span3">
+                    <option>-----</option>
+                    <option>None</option>
+                    <option>Attack</option>
+                    <option>Easy</option>
+                    <option>Average</option>
+                    <option>Hard</option>
+                    <option>Tough</option>
+                    <option>Challenging</option>
+                    <option>Problematic</option>
+                    <option>Brutal</option>
+                    <option>Unforgiving</option>
+                    <option>Impossible</option>
+                    <option>Impossible +</option>
+                  </select>
+                <label class="tentext">Cooldown</label>
+                <input name="attr_spellcoolnumber" type="number" value="0" min="0" class="span2"/>
+                <select name="attr_spellcoolselect" style="width: 90px" class="span3">
+                    <option>Rounds</option>
+                    <option>Seconds</option>
+                    <option>Minutes</option>
+                    <option>Hours</option>
+                    <option>Days</option>
+                    <option>Weeks</option>
+                    <option>Months</option>
+                    <option>Years</option>
+                </select>
+                <select name="attr_spellactiveselect" style="width: 100px">
+                    <option>Active</option>
+                    <option>Inactive</option>
+                </select>
+                
+                    
+                <input class="aoebox centertext" type="checkbox" name="attr_aoecheck" value="1" />
+                
+                <label class="centertext tentext">AOE</label>
+                
+                <div class="spellsubcell2">
+                    <select class="span2" style="width: 80px" name="attr_spellareaselect">
+                        <option value="0">---</option>
+                        <option value="1">Line</option>
+                        <option value="2">Area</option>
+                        <option value="3">Cone</option>
+                    </select>
+                    
+                    <input class="spellaoeselect spellaoede0" type="checkbox" name="attr_spellareaselect" value="0"> <!-- Line -->
+                    <input class="spellaoeselect spellaoede1" type="checkbox" name="attr_spellareaselect" value="1"> <!-- Line -->
+                    <input class="spellaoeselect spellaoede2" type="checkbox" name="attr_spellareaselect" value="2"> <!-- Area -->
+                    <input class="spellaoeselect spellaoede3" type="checkbox" name="attr_spellareaselect" value="3"> <!-- Cone -->
+                    
+                    <div class="spellareahidden-emptyaoe">
+                        <span></span>
+                    </div>
+                    
+                    <div class="spellareahidden-lineaoe">
+                        <input type="number" value="0" min="0" />
+                        <input type="text" class="75text" placeholder="Squares" />
+                    </div>
+                    
+                    <div class="spellareahidden-areaaoe">
+                        <input class="aoearearange" type="number" value="0" min="0" />
+                        <label>X</label>
+                        <input class="aoearearange" type="number" value="0" min="0" />
+                        <input type="text" class="75text" placeholder="Squares" />
+                    </div>
+                    
+                    <div class="spellareahidden-coneaoe">
+                        <input type="number" value="0" min="0" />
+                        <input type="text" class="75text" placeholder="Squares" />
+                    </div>
+                            
+                </div>
+                        
+                        
+                        <label class="tentext endtext span9">Spell Description:</label>
+                        <textarea class="spellbox" name="attr_spelldets"> </textarea>
+            </div>
+            </fieldset>
+        </div>
+    </div>
+    
+    
+    
+    <div class="global-container5 sheet-tab-content sheet-tab5">
+       <div class="bio1A">
+           <input type="text" class="75text span2" placeholder="Pronouns" name="attr_pronouns" />
+           <input type="text" class="200text span6" placeholder="Character Name" name="attr_Char_Name" />
+           <label class="tentext">Age:</label>
+           <input type="number" name="attr_age" value="0" min="0" />
+           <select style="width: 120px" class="span4" >
+               <option>
+                   Years
+               </option>
+               
+               <option>
+                   Days
+               </option>
+               
+               <option>
+                   Millenia
+               </option>
+           </select>
+           <input type="text" name="attr_species" class="200text span8" placeholder="Species" />
+           <label class="tentext">Weight:</label>
+           <input type="number" name="attr_weight" value="0" min="0" />
+           <select style="width: 90px" class="span3">
+               <option>
+                   Pounds
+               </option>
+               
+               <option>
+                   Kilograms
+               </option>
+               
+               <option>
+                   Tonnes
+               </option>
+           </select>
+           <input type="text" name="attr_ancestry" class="200text span8" placeholder="Ancestry Path" />
+           <label class="tentext">Height:</label>
+           <input type="number" name="attr_height" value="0" min="0" />
+           <select style="width: 80px" class="span4" >
+               <option>
+                   Feet
+               </option>
+               
+               <option>
+                   Meters
+               </option>
+           </select>
+           <input type="text" name="attr_heritage" class="200text span7" placeholder="Family Heritage" />
+           <textarea class="biowidebox span7" name="attr_biodets" placeholder="Visual Description"></textarea>
+           <input type="text" name="attr_profession" class="200text span14" placeholder="Profession" />
+           <span class="span14"></span>
+           <div class="tribox span14">
+           <textarea class="biobox" name="attr_bioobsess" placeholder="Obsessions"></textarea>
+           <textarea class="biobox" name="attr_biohabits" placeholder="Habits"></textarea>
+           <textarea class="biobox" name="attr_biofear" placeholder="Fears"></textarea>
+           </div>
+           <textarea class="biolargebox" name="attr_biostoryback" placeholder="Backstory"></textarea>
+       </div>
+        
+    </div>
+    
+    
+    <div class="global-container6 sheet-tab-content sheet-tab6">
+        <div class="party1A">
+        
+        <div>
+        <button type="action" name="act_beast" >Creatures</button>
+        <button type="action" name="act_robot" >Summons</button>
+        <button type="action" name="act_npc" >Contacts</button>
+        </div>
+        
+        <input type='hidden' class='sheet-tabstoggle3' name='attr_sheetTab3'  value='character'  />
+        
+        <div class="roll">
+                            <label>Companion Dice Roller</label>
+                                <form>
+                                    D2 <button type="roll" value="/roll 1d2" name="roll_d2"> </button>
+                                    D3 <button type="roll" value="/roll 1d3" name="roll_d3"> </button>
+                                    D6 <button type="roll" value="/roll 1d6cf<2cs>5" name="roll_d6"> </button>
+                                    2d6 <button type="roll" value="/roll 2d6cf<2cs>5" name="roll_d12"> </button>
+                                    Xd6 <input type="number" name="attr_extra6" />
+                                        <button type="roll" value="/roll @{extra6}d6cf<2cs>5" name="roll_xd6"> </button>
+                                </form>
+                	    </div>
+        
+            <div class='beast repeatscroll'>
+                <div class="creaturecore">
+                        
+                    <fieldset class="repeating_creatures">
+                        <div class="companions">
+                            <input type="text" name="attr_crname" class="largetext span2" placeholder="Creature Name" />
+                            <input type="text" name="attr_crtags" class="400text" placeholder="Tags (e.g. Beast / Robot)" />
+                            <input type="text" name="attr_crdifficulty" class="100text" placeholder="Difficulty" />
+                            
+                            <div class="statblock span2">
+                            	<div class="crvirtues">
+                            	    <label>POW</label>
+                            	    <input type="number" name="attr_crpow" value="0" min="0" max="10" />
+                            	    <label>FIN</label>
+                            	    <input type="number" name="attr_crfin" value="0" min="0" max="10" />
+                            	    <label>VIT</label>
+                            	    <input type="number" name="attr_crvit" value="0" min="0" max="10" />
+                            	    <label>MEN</label>
+                            	    <input type="number" name="attr_crmen" value="0" min="0" max="10" />
+                            	    <label>JUD</label>
+                            	    <input type="number" name="attr_crjud" value="0" min="0" max="10" />
+                            	    <label>CHA</label>
+                            	    <input type="number" name="attr_crcha" value="0" min="0" max="10" />
+                            	</div>
+                            	<div class="statcore">
+                            		<div class="crvitals">
+                            		    <label>ARMOR:</label>
+                            		    <select name="attr_crarmor" class='optslist'>
+                                            <option>None</option>
+                                            <option>Easy</option>
+                                            <option>Average</option>
+                                            <option>Hard</option>
+                                            <option>Tough</option>
+                                            <option>Challenging</option>
+                                            <option>Problematic</option>
+                                            <option>Brutal</option>
+                                            <option>Unforgiving</option>
+                                        </select>
+                                        |
+                            		    <label>HP:</label>
+                            		    <input type="number" name="attr_crhp" class="mednumber" value="0" min="0" />
+                            		    |
+                            		    <label>MOVE:</label>
+                            		    <input type="number" name="attr_crmove" value="0" min="0" />
+                            		</div>
+                            		<div class="statcell">
+                            			<div class="crattacks">
+                            			    <label>ATTACKS:</label>
+                            			    <input type="number" name="attr_crattnu" value="1" min="1" />
+                            			</div>
+                            			<div class="crweapons">
+                            			    
+                            			    <input type="text" name="attr_crweapn1" class="100text" placeholder="Weapon" />
+                            			    <input type="text" name="attr_crweapr1" class="50text" placeholder="Range" />
+                            			    <input type="text" name="attr_crweapd1" class="75text" placeholder="Damage" />
+                            			    
+                            			    <input type="text" name="attr_crweapn2" class="100text" placeholder="Weapon" />
+                            			    <input type="text" name="attr_crweapr2" class="50text" placeholder="Range" />
+                            			    <input type="text" name="attr_crweapd2" class="75text" placeholder="Damage" />
+                            			    
+                            			    <input type="text" name="attr_crweapn3" class="100text" placeholder="Weapon" />
+                            			    <input type="text" name="attr_crweapr3" class="50text" placeholder="Range" />
+                            			    <input type="text" name="attr_crweapd3" class="75text" placeholder="Damage" />
+                            			</div>
+                            		</div>
+                            		<div class="crskills">
+                            		    <input type="text" name="attr_crskill1" class="100text" placeholder="Skill" />
+                            		    <input type="number" name="attr_crsk1" value="0" min="0" />
+                            		    <input type="text" name="attr_crskill2" class="100text" placeholder="Skill" />
+                            		    <input type="number" name="attr_crsk2" value="0" min="0" />
+                            		    <input type="text" name="attr_crskill3" class="100text" placeholder="Skill" />
+                            		    <input type="number" name="attr_crsk3" value="0" min="0" />
+                            		    <input type="text" name="attr_crskill4" class="100text" placeholder="Skill" />
+                            		    <input type="number" name="attr_crsk4" value="0" min="0" />
+                            		    <input type="text" name="attr_crskill5" class="100text" placeholder="Skill" />
+                            		    <input type="number" name="attr_crsk5" value="0" min="0" />
+                            		    <input type="text" name="attr_crskill6" class="100text" placeholder="Skill" />
+                            		    <input type="number" name="attr_crsk6" value="0" min="0" />
+                            		</div>
+                            	</div>
+                            </div>
+                            <div class="crabilities span2">
+                                <textarea class="biolargebox" name="attr_creatureabil" placeholder="Creature Abilities"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            
+            
+            <div class='robot'>
+                <label>Summons</label>
+                <div class="creaturecore">
+                    <fieldset class="repeating_summons">
+                        <div class="spirits">
+                            <input type="text" name="attr_suname" class="largetext span2" placeholder="Summon" />
+                            <input type="text" name="attr_sutags" class="400text" placeholder="Tags (e.g. Spirit / Golem)" />
+                            Summon Name
+                            checks (dice bonus/skill point/attackable/arcanting focus)
+                            Duration
+                            Til Dispelled checkbox that hides duration
+                            tags
+                            1hp
+                            2dicebonus (number Select auto/bonus text)
+                            1sp
+                            3skill points
+                            details
+                            
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            
+            
+            <div class='npc'> 
+            <label>Contacts</label>
+            <div class="creaturecore">
+                    <fieldset class="repeating_companions">
+                        <div class="npcs">
+                            <input type="text" name="attr_npcname" class="200text" placeholder="Name" />
+                            <select>
+                                <option>Ally</option>
+                                <option>Adversary</option>
+                            </select>
+                            <div class="flex">
+                                <input type="checkbox" name="attr_npcdeceased" value="1" class='centre' />
+                                <label class="tentext">Deceased Status</label>
+                            </div>
+                    <input type="text" name="attr_npcprofession" class="100text" placeholder="Profession" />
+                    <input type="text" name="attr_npcorigin" class="150text" placeholder="Origin" />
+                    <textarea class="doublebox" name="attr_npcdet" placeholder="Details"></textarea>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+              
+            <script type="text/worker">
+                const buttonlist = ["beast","robot","npc"];
+                buttonlist.forEach(button => {
+                    on(`clicked:${button}`, function() {
+                        setAttrs({
+                            sheetTab3: button
+                        });
+                    });
+                });
+            </script>
+        </div>
+
+
+        <div class="party2A">
+            <label>Character Relations</label>
+            <div class="repeatscroll">
+            <fieldset class="repeating_family">
+                <div class="family">
+                    <input type="text" name="attr_famname" class="200text" placeholder="Name" />
+                    <input type="text" name="attr_famrelation" class="100text" placeholder="Relation" />
+                    <div class="flex">
+                        <input type="checkbox" name="attr_famdeceased" value="1" class='centre' />
+                        <label class="tentext">Deceased Status</label>
+                    </div>
+                    <input type="text" name="attr_famprofession" class="100text" placeholder="Profession" />
+                    <input type="text" name="attr_famresidence" class="150text" placeholder="Residence" />
+                </div>
+            </fieldset>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+    <div class="global-container7 sheet-tab-content sheet-tab7">    
+        Tools and More
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    
+</div>
