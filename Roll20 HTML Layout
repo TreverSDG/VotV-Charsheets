@@ -70,7 +70,7 @@
         <div class="charsec1C">
             
             Movement: <input type="number" name="attr_Move" value="6" min="0" max="50"/> squares <br/> <br/>
-    		Initiative: <button type="roll" value="/roll 1d6 + @{Finesse} + @{init6}" name="roll_AP"> </button> 
+    		Initiative: <button type="roll" value="/roll 1d6 + @{Finesse} + @{init6} &{tracker}" name="roll_AP"> </button> 
     		    + <input type="number" name="attr_init6" value="0" /> 
     	    <br/><br/>
             Determination: <input type="number" name="attr_DetermPs" value="0" min="0" max="20"/>
