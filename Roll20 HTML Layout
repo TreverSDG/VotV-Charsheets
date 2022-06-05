@@ -79,9 +79,9 @@
         <div class="charsec2A">
             
             <label>Class Points: </label>
-            <input type="number" name="attr_CClassP" value="0" min="0" max="20"/>
+            <input type="number" name="attr_CClassP" value="0" min="0" max="50"/>
             /
-            <input type="number" name="attr_maxClassP" value="0" min="0" max="20"/>
+            <input type="number" name="attr_maxClassP" value="0" min="0" max="50"/>
             
             <div>
             <label class="fieldheading">Currency:</label>
@@ -313,6 +313,13 @@
                                 <option value="6d6 + @{WB}">6d6</option>
                                 <option value="7d6 + @{WB}">7d6</option>
                                 <option value="8d6 + @{WB}">8d6</option>
+                                <option value="9d6 + @{WB}">9d6</option>
+                                <option value="10d6 + @{WB}">10d6</option>
+                                <option value="11d6 + @{WB}">11d6</option>
+                                <option value="12d6 + @{WB}">12d6</option>
+                                <option value="13d6 + @{WB}">13d6</option>
+                                <option value="14d6 + @{WB}">14d6</option>
+                                <option value="15d6 + @{WB}">15d6</option>
                             </select>
                             <label>+</label>
                             <input type="number" name="attr_WB" class="customweapon" value="0" min="0" max="99"/>
