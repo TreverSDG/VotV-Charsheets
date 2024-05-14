@@ -152,8 +152,16 @@
                         <input type="number" name="attr_FlightS"> sqs</label>
                             <div class="break"></div>
                         <label>Initiative
-                        <button type="roll" value="/roll 1d6 + @{Finesse} + @{checkbox} &{tracker}" name="attr_Initiative">R</button>
-                        Awareness <input type="checkbox" value="1" name="attr_checkbox"></label>
+                            <select name="attr_InitiativeChoices" style="width: 35px;">
+                                <option value="@{Finesse}">F</option>
+                                <option value="@{Power}">P</option>
+                                <option value="@{Vitality}">V</option>
+                                <option value="@{Mentality}">M</option>
+                                <option value="@{Judgement}">J</option>
+                                <option value="@{Charm}">C</option>
+                            </select>
+                            <input type="number" name="attr_InitiativeNumber1" value="0" min="0">
+                            <button type="roll" value="/roll 1d6 + @{InitiativeChoices} + @{InitiativeNumber1} &{tracker}" name="attr_Initiative" style="width: 40px;">Roll</button></label>
                         
                     </form>
                 </div>
