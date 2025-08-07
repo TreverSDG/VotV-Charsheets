@@ -455,7 +455,7 @@
                         <input type="number" name="attr_ObservationLevel" style="width: 40px;">&nbsp;|&nbsp;
                         <input type="number" name="attr_ObservationRoll" style="width: 45px;">&nbsp;|&nbsp;
                         <input type="number" name="attr_ObservationBD" value="0" min="0" max="4" style="width: 40px;">&nbsp;|&nbsp;
-                        <input type="number" name="attr_MuscleAH" value="0" min="0" max="4" style="width: 40px;">
+                        <input type="number" name="attr_ObservationAH" value="0" min="0" max="4" style="width: 40px;">
                     </div>
                 
                 <div class="break"></div>
